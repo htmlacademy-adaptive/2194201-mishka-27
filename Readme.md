@@ -1,7 +1,7 @@
-# Личный проект «Мишка» 
+# Личный проект «Мишка»
 
-* Студент: [Денис Левчев](https://up.htmlacademy.ru/adaptive/27/user/2194201).
-* Наставник: `Неизвестно`.
+- Студент: [Денис Левчев](https://up.htmlacademy.ru/adaptive/27/user/2194201).
+- Наставник: [Павел Позняк](https://htmlacademy.ru/profile/id907403).
 
 ---
 
