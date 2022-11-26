@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png">
-  <link rel="icon" href="img/favicons/favicon.svg" type=" image/svg+xml">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=4f126ce7-16d1-458c-92e7-71420cce269a&lang=ru_RU"></script>
 </head>
 
 <body class="page-body">
@@ -121,8 +122,8 @@
         <span class="contacts__address-text">адрес:</span>
         <address class="contacts__address address">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</address>
       </div>
-      <div class="map">
-        <!-- Здесь будет карта -->
+      <!-- Чтобы карта отображалась, размеры временно прописаны в аттрибутах -->
+      <div class="map" id="map" style="width: 100%; height: 400px">
       </div>
       <a class="about__link button button--primary" href="#">Напишите нам</a>
     </section>
@@ -179,6 +180,8 @@
       <button class="modal__button button button--secondary" type="button">Добавить</button>
     </section>
   </div>
+
+  <script src="js/map.js"></script>
 </body>
 
 </html>
