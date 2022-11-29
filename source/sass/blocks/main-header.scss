@@ -1,0 +1,55 @@
+.main-header__button {
+  display: block;
+  width: 20px;
+  height: 14px;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 0.25s;
+
+  .is-open & {
+    height: 20px;
+  }
+}
+
+.main-header__button-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  margin: auto;
+  background-color: $color-aubergine;
+  transition: 0.25s;
+
+  &--top {
+    top: 0;
+
+    .is-open & {
+      top: 9px;
+      transform: rotate(45deg) scaleX(1.4);
+    }
+  }
+
+  &--center {
+    top: 0;
+    bottom: 0;
+
+    .is-open & {
+      width: 0;
+      opacity: 0;
+    }
+  }
+
+  &--bottom {
+    bottom: 0;
+
+    .is-open & {
+      bottom: 9px;
+      transform: rotate(-45deg) scaleX(1.4);
+    }
+  }
+}
