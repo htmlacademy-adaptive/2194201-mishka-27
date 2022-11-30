@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  padding-top: 73px;
+  background-color: $color-white-smoke;
+  background-image: url("../../img/hero-mobile@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__title {
+  padding: 0 $indent-edge 223px $indent-edge;
+  font-size: 27px;
+  text-align: center;
+}
+
+.hero__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__item {
+  width: 50%;
+  flex-grow: 1;
+  background-color: $color-downy-1;
+
+  &:nth-child(even) {
+    background-color: $color-puerto-rico;
+  }
+}
+
+.hero__link {
+  display: inline-block;
+  width: 100%;
+  padding: 24px 160px 31px 30px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
