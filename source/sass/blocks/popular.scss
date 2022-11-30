@@ -1,0 +1,55 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  padding: 31px $indent-edge 36px $indent-edge;
+}
+
+.popular__title {
+  margin-bottom: 3px;
+}
+
+.popular__benefit {
+  margin-bottom: 17.5px;
+  text-transform: uppercase;
+  color: $color-downy-1;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.popular__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.popular__parameters {
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.popular__parameters-wrapper {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid $color-whisper-1;
+}
+
+.popular__title-item {
+  flex-basis: 97px;
+}
+
+.popular__description-item {
+  flex-basis: 162px;
+  margin: 0;
+}
+
+.popular__image {
+  margin-bottom: 25.5px;
+  vertical-align: middle;
+}
+
+.popular__price {
+  margin-bottom: 24.5px;
+  font-size: 17px;
+  text-align: center;
+}

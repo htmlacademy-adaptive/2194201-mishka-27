@@ -7,7 +7,7 @@
   padding: 0 $indent-edge;
   text-align: center;
   background-color: $color-white;
-  box-shadow: 0px 1px 0px $color-whisper, inset 0px 1px 0px $color-whisper;
+  box-shadow: 0px 1px 0px $color-whisper-1, inset 0px 1px 0px $color-whisper-1;
   z-index: 1;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .main-header__item {
-  box-shadow: 0px 1px 0px $color-whisper, inset 0px 1px 0px $color-whisper;
+  box-shadow: 0px 1px 0px $color-whisper-1, inset 0px 1px 0px $color-whisper-1;
 }
 
 .main-header__link {

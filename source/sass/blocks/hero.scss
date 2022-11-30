@@ -1,6 +1,6 @@
 .hero {
-  position: relative;
-  padding-top: 73px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   background-color: $color-white-smoke;
   background-image: url("../../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
@@ -8,39 +8,43 @@
 }
 
 .hero__title {
-  padding: 0 $indent-edge 223px $indent-edge;
+  padding: 73px $indent-edge 120px $indent-edge;
   font-size: 27px;
   text-align: center;
 }
 
 .hero__list {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  flex-direction: column;
+  align-self: end;
   width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .hero__item {
-  width: 50%;
   flex-grow: 1;
-  background-color: $color-downy-1;
+
+  &:nth-child(odd) {
+    background-color: $color-downy-1;
+  }
 
   &:nth-child(even) {
-    background-color: $color-puerto-rico;
+    background-color: $color-puerto-rico-1;
   }
 }
 
 .hero__link {
   display: inline-block;
   width: 100%;
-  padding: 24px 160px 31px 30px;
+  padding: 24px 100px 31px $indent-edge;
   font-size: 19px;
   font-weight: 700;
   color: #ffffff;
+  transition: 0.2s;
+
+  &:hover {
+    padding-bottom: 36px;
+  }
 }
