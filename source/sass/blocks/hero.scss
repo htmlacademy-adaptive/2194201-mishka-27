@@ -7,6 +7,7 @@
 
 .hero__title {
   padding: 73px $indent-edge 120px $indent-edge;
+
   font-size: 27px;
   text-align: center;
 }
@@ -17,6 +18,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -37,26 +39,32 @@
 }
 
 .hero__link {
-  display: block;
   position: relative;
+
+  display: block;
   width: 100%;
-  font-size: 19px;
-  font-weight: 700;
-  color: $color-white;
-  transition: 0.2s;
   min-height: 103px;
+
+  font-weight: 700;
+  font-size: 19px;
+  color: $color-white;
+
+  transition: 0.2s;
 }
 
 .hero__text {
-  width: 100%;
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
+
+  width: 100%;
   padding: 24px 100px 31px $indent-edge;
+
   background-color: $color-downy-1;
 
   &:hover {
     padding-bottom: 36px;
+
     background-color: $color-downy-3;
   }
 }

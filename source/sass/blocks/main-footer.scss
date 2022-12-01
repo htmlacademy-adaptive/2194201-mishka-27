@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 25px $indent-edge 23px $indent-edge;
+
   background-color: $color-white-smoke;
 }
 
@@ -10,10 +11,12 @@
 }
 
 .main-footer__social {
-  justify-content: center;
   position: relative;
+
+  justify-content: center;
   margin-bottom: 20px;
   padding-bottom: 20px;
+
   border-bottom: 1px solid $color-whisper-2;
 }
 
@@ -27,6 +30,7 @@
   align-self: center;
   width: fit-content;
   padding: 5px;
+
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
@@ -47,5 +51,6 @@
 
 .main-footer__svg {
   margin-left: 27px;
+
   fill: $color-downy-1;
 }

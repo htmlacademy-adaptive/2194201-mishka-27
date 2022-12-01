@@ -10,11 +10,12 @@
 
 .popular__benefit {
   margin-bottom: 17.5px;
-  text-transform: uppercase;
-  color: $color-downy-1;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
+  color: $color-downy-1;
+  text-transform: uppercase;
 }
 
 .popular__description {
@@ -25,12 +26,14 @@
 .popular__parameters {
   margin: 0;
   margin-bottom: 20px;
+
   line-height: 20px;
 }
 
 .popular__parameters-wrapper {
   display: flex;
   padding: 8px 0;
+
   border-bottom: 1px solid $color-whisper-1;
 }
 
@@ -45,11 +48,13 @@
 
 .popular__image {
   margin-bottom: 25.5px;
+
   vertical-align: middle;
 }
 
 .popular__price {
   margin-bottom: 24.5px;
+
   font-size: 17px;
   text-align: center;
 }

@@ -15,12 +15,27 @@
 
   &--primary {
     color: $color-charcoal;
-    border: 2px solid $color-charcoal;
+
     background-color: $color-white;
+    border: 2px solid $color-charcoal;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:focus-visible {
+      border: 2px solid $color-downy-2;
+      outline: none;
+    }
 
     &:hover {
-      background-color: $color-charcoal;
       color: $color-white;
+
+      background-color: $color-charcoal;
     }
 
     &:active {
@@ -29,8 +44,9 @@
   }
 
   &--secondary {
-    background-color: $color-downy-1;
     color: $color-white;
+
+    background-color: $color-downy-1;
 
     &:hover {
       background-color: $color-puerto-rico-1;
@@ -43,6 +59,7 @@
 
   &:disabled {
     opacity: 0.3;
+
     pointer-events: none;
   }
 }

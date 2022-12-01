@@ -9,6 +9,7 @@
 .reviews__description {
   margin: 0;
   margin-bottom: 33px;
+
   line-height: 30px;
 }
 
@@ -16,11 +17,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+
   font-size: 17px;
 }
 
 .reviews__name {
   margin-bottom: 5px;
+
   font-weight: 700;
   color: $color-black;
 }
@@ -34,6 +37,7 @@
   width: 130px;
   height: 52px;
   padding: 0;
+
   border: 1px solid $color-whisper-1;
 
   &--right {
@@ -42,6 +46,7 @@
 
   &:disabled {
     opacity: 0.3;
+
     pointer-events: none;
   }
 }

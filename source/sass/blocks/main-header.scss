@@ -4,11 +4,14 @@
 
 .main-header__inner {
   position: relative;
+  z-index: 2;
+
   padding: 0 $indent-edge;
+
   text-align: center;
+
   background-color: $color-white;
   box-shadow: 0 1px 0 $color-whisper-1, inset 0 1px 0 $color-whisper-1;
-  z-index: 2;
 }
 
 .main-header__logo {
@@ -30,34 +33,40 @@
 }
 
 .main-header__button {
-  width: 40px;
-  height: 40px;
   position: absolute;
   top: 0;
-  bottom: 0;
   right: $indent-edge;
+  bottom: 0;
+
+  width: 40px;
+  height: 40px;
   margin: auto;
   padding: 0;
-  border: none;
+
   background-color: $color-white;
+  border: none;
   cursor: pointer;
 
   &:disabled {
     opacity: 0.3;
+
     pointer-events: none;
   }
 }
 
 .main-header__button-line {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
+
   width: 20px;
   height: 2px;
   margin: auto;
+
   background-color: $color-aubergine;
+
   transition: transform 0.2s;
 
   &:not(:first-child):not(:last-child) {
@@ -84,13 +93,16 @@
 }
 
 .main-header__navigation {
-  width: 100%;
   position: absolute;
   bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+
   background-color: $color-white;
   transform: translateY(0);
+
   transition: transform 0.2s ease-out;
-  z-index: 1;
 
   .is-open & {
     transform: translateY(100%);
@@ -101,6 +113,7 @@
 .main-header__user-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -109,10 +122,12 @@
 }
 
 .main-header__link {
+  position: relative;
+
   display: block;
   margin: 0 $indent-edge;
   padding: 27.5px 0 27.5px 44px;
-  position: relative;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -135,7 +150,9 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
   left: 10px;
+
+  margin: auto;
+
   fill: rgba($color: $color-black, $alpha: 0.2);
 }
