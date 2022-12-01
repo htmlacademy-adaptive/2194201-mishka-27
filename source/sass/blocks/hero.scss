@@ -25,10 +25,7 @@
 
 .hero__item {
   flex-grow: 1;
-
-  &:nth-child(odd) {
-    background-color: $color-downy-1;
-  }
+  background-color: $color-downy-1;
 
   &:nth-child(even) {
     background-color: $color-puerto-rico-1;
