@@ -29,11 +29,9 @@
     }
   }
 
-  &:hover {
-    &:nth-child(even) {
-      .hero__text {
-        background-color: $color-puerto-rico-2;
-      }
+  &:hover:nth-child(even) {
+    .hero__text {
+      background-color: $color-puerto-rico-2;
     }
   }
 }

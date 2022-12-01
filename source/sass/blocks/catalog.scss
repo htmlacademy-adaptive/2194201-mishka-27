@@ -18,11 +18,11 @@
   border: 1px solid $color-whisper-1;
 
   &:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
   &:active {
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -30,10 +30,6 @@
 .catalog__link-title,
 .catalog__description {
   grid-column: 1 / -1;
-}
-
-.catalog__link-image {
-  margin-bottom: 27.5px;
 }
 
 .catalog__image {
