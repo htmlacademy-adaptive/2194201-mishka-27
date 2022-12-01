@@ -16,6 +16,14 @@
   grid-template-columns: 1fr 1fr;
   padding-bottom: 15px;
   border: 1px solid $color-whisper-1;
+
+  &:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog__link-image,
@@ -39,6 +47,18 @@
 .catalog__link-title {
   padding: 0 $indent-edge;
   margin-bottom: 6px;
+
+  &:hover {
+    .title {
+      color: rgba($color: $color-black, $alpha: 0.6);
+    }
+  }
+
+  &:active {
+    .title {
+      color: rgba($color: $color-black, $alpha: 0.3);
+    }
+  }
 }
 
 .catalog__title {
@@ -76,6 +96,18 @@
   padding: 5px;
   grid-column-end: -1;
   justify-self: end;
+
+  &:hover {
+    .catalog__svg {
+      fill: $color-downy-1;
+    }
+  }
+
+  &:active {
+    .catalog__svg {
+      fill: rgba($color: $color-downy-1, $alpha: 0.3);
+    }
+  }
 }
 
 .catalog__svg {
