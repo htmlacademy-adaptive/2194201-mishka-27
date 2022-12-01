@@ -3,11 +3,21 @@
 let headerContainer = document.querySelector(".main-header");
 let headerButtonMenu = document.querySelector(".main-header__button");
 let popularButton = document.querySelector(".popular__link");
+let basketButtons = document.querySelectorAll(".catalog__link-basket");
 let modalOverlay = document.querySelector(".modal");
 let modalContainer = document.querySelector(".modal__container");
 
+if (popularButton) {
+  popularButton.addEventListener("click", openModal);
+}
+
+if (basketButtons.length !== 0) {
+  for (const button of basketButtons) {
+    button.addEventListener("click", openModal);
+  }
+}
+
 headerButtonMenu.addEventListener("click", openMainMenu);
-popularButton.addEventListener("click", openModal);
 
 function addEventForCloseElement() {
   document.addEventListener("click", closeElement);
@@ -37,15 +47,30 @@ function closeElement(event) {
   const withinPopularButton = event.composedPath().includes(popularButton);
   const withinModalContainer = event.composedPath().includes(modalContainer);
 
+  let searchBasketButton = function () {
+    for (let i = 0; i < basketButtons.length; i++) {
+      const withinBasketButton = event
+        .composedPath()
+        .includes(basketButtons[i]);
+
+      if (withinBasketButton) return withinBasketButton;
+    }
+  };
+
   if (!withinMainMenu) {
     headerContainer.classList.remove("is-open");
   }
 
-  if (!withinPopularButton && !withinModalContainer) {
+  if (!withinPopularButton && !withinModalContainer && !searchBasketButton()) {
     modalOverlay.classList.remove("is-open");
   }
 
-  if (!withinPopularButton && !withinModalContainer && !withinMainMenu) {
+  if (
+    !withinPopularButton &&
+    !withinModalContainer &&
+    !withinMainMenu &&
+    !searchBasketButton()
+  ) {
     removeEventForCloseElement();
   }
 }
