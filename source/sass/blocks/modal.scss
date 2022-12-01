@@ -9,6 +9,7 @@
   left: 0;
   background-color: rgba($color: $color-white, $alpha: 0.9);
   z-index: 2;
+  cursor: pointer;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s, visibility 0s 0.2s;
@@ -27,6 +28,7 @@
   background-color: $color-white;
   border: 1px solid $color-silver;
   box-shadow: 0px 5px 10px rgba($color: $color-black, $alpha: 0.25);
+  cursor: default;
 }
 
 .modal__title {
