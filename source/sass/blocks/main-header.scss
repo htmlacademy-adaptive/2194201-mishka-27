@@ -8,7 +8,7 @@
   text-align: center;
   background-color: $color-white;
   box-shadow: 0px 1px 0px $color-whisper-1, inset 0px 1px 0px $color-whisper-1;
-  z-index: 1;
+  z-index: 2;
 }
 
 .main-header__logo {
@@ -39,7 +39,7 @@
   margin: auto;
   padding: 0;
   border: none;
-  background-color: #ffffff;
+  background-color: $color-white;
   cursor: pointer;
 
   &:disabled {
@@ -90,6 +90,7 @@
   background-color: $color-white;
   transform: translateY(0);
   transition: transform 0.2s ease-out;
+  z-index: 1;
 
   .is-open & {
     transform: translateY(100%);

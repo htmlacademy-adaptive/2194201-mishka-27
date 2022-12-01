@@ -1,6 +1,4 @@
 .hero {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
   background-color: $color-white-smoke;
   background-image: url("../../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
@@ -16,7 +14,6 @@
 .hero__list {
   display: flex;
   flex-direction: column;
-  align-self: end;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -25,23 +22,43 @@
 
 .hero__item {
   flex-grow: 1;
-  background-color: $color-downy-1;
 
   &:nth-child(even) {
-    background-color: $color-puerto-rico-1;
+    .hero__text {
+      background-color: $color-puerto-rico-1;
+    }
+  }
+
+  &:hover {
+    &:nth-child(even) {
+      .hero__text {
+        background-color: $color-puerto-rico-2;
+      }
+    }
   }
 }
 
 .hero__link {
-  display: inline-block;
+  display: block;
+  position: relative;
   width: 100%;
-  padding: 24px 100px 31px $indent-edge;
   font-size: 19px;
   font-weight: 700;
-  color: #ffffff;
+  color: $color-white;
   transition: 0.2s;
+  min-height: 103px;
+}
+
+.hero__text {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 24px 100px 31px $indent-edge;
+  background-color: $color-downy-1;
 
   &:hover {
     padding-bottom: 36px;
+    background-color: $color-downy-3;
   }
 }
