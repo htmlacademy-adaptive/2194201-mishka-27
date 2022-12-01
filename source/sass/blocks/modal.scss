@@ -49,12 +49,6 @@
 }
 
 .modal__radio-input {
-  &:focus {
-    + .modal__radio-text {
-      outline: 2px solid $color-black;
-    }
-  }
-
   &:checked {
     + .modal__radio-text {
       border-color: $color-downy-1;

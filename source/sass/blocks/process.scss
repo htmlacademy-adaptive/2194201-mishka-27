@@ -1,0 +1,50 @@
+.process {
+  padding: 15px $indent-edge 58px $indent-edge;
+}
+
+.process__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 21.5px;
+  padding-bottom: 33px;
+  border: 1px solid $color-whisper-1;
+}
+
+.process__title {
+  padding: 0 34px 26.5px 34px;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.process__wrapper {
+  width: max-content;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.process__image {
+  vertical-align: middle;
+}
+
+.process__play-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  width: 101px;
+  height: 77px;
+}
+
+.process__description {
+  margin: 0;
+  margin-bottom: 41px;
+  padding: 0 34px;
+  font-size: 13px;
+}
+
+.process__button {
+  margin: 0 34px;
+}
