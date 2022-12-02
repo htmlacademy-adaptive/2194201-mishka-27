@@ -1,5 +1,5 @@
 .catalog {
-  padding: 30px $indent-edge 15px $indent-edge;
+  padding: 30px 30px 15px 30px;
 }
 
 .catalog__list {
@@ -22,11 +22,11 @@
   grid-template-columns: 1fr 1fr;
 
   &:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba($color-black, 0.1);
   }
 
   &:active {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba($color-black, 0.1);
   }
 }
 
@@ -41,22 +41,22 @@
 }
 
 .catalog__link-image {
-  margin-bottom: 27.5px;
+  margin-bottom: 27px;
 }
 
 .catalog__link-title {
   margin-bottom: 6px;
-  padding: 0 $indent-edge;
+  padding: 0 30px;
 
   &:hover {
     .title {
-      color: rgba($color: $color-black, $alpha: 0.6);
+      color: rgba($color-black, 0.6);
     }
   }
 
   &:active {
     .title {
-      color: rgba($color: $color-black, $alpha: 0.3);
+      color: rgba($color-black, 0.3);
     }
   }
 }
@@ -71,7 +71,7 @@
 
   margin: 0;
   margin-bottom: 20px;
-  padding: 0 $indent-edge 17.5px $indent-edge;
+  padding: 0 30px 17px 30px;
 
   font-size: 13px;
 
@@ -82,7 +82,7 @@
     bottom: 0;
     left: 0;
 
-    width: calc(100% - $indent-edge * 2);
+    width: calc(100% - 60px);
     height: 1px;
     margin: 0 auto;
 
@@ -91,13 +91,13 @@
 }
 
 .catalog__price {
-  padding-left: $indent-edge;
+  padding-left: 30px;
 
   grid-column: 1;
 }
 
 .catalog__link-basket {
-  margin-right: $indent-edge - 5;
+  margin-right: 25px;
   padding: 5px;
 
   grid-column-end: -1;
@@ -111,7 +111,7 @@
 
   &:active {
     .catalog__svg {
-      fill: rgba($color: $color-downy-1, $alpha: 0.3);
+      fill: rgba($color-downy-1, 0.3);
     }
   }
 }
@@ -119,5 +119,5 @@
 .catalog__svg {
   display: block;
 
-  fill: rgba($color: $color-black, $alpha: 0.2);
+  fill: rgba($color-black, 0.2);
 }

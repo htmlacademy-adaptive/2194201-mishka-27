@@ -1,7 +1,7 @@
 .main-footer {
   display: flex;
   flex-direction: column;
-  padding: 25px $indent-edge 23px $indent-edge;
+  padding: 25px 30px 23px 30px;
 
   background-color: $color-white-smoke;
 }
@@ -44,7 +44,7 @@
 
   &:active {
     & .main-footer__svg {
-      fill: rgba($color: $color-puerto-rico-2, $alpha: 0.3);
+      fill: rgba($color-puerto-rico-2, 0.3);
     }
   }
 }

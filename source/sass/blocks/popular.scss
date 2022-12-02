@@ -1,7 +1,7 @@
 .popular {
   display: flex;
   flex-direction: column;
-  padding: 31px $indent-edge 36px $indent-edge;
+  padding: 31px 30px 36px 30px;
 }
 
 .popular__title {
@@ -9,7 +9,7 @@
 }
 
 .popular__benefit {
-  margin-bottom: 17.5px;
+  margin-bottom: 17px;
 
   font-weight: 700;
   font-size: 17px;
@@ -47,13 +47,13 @@
 }
 
 .popular__image {
-  margin-bottom: 25.5px;
+  margin-bottom: 25px;
 
   vertical-align: middle;
 }
 
 .popular__price {
-  margin-bottom: 24.5px;
+  margin-bottom: 24px;
 
   font-size: 17px;
   text-align: center;

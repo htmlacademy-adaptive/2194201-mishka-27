@@ -1,5 +1,5 @@
 .order {
-  padding: 17px $indent-edge 55px $indent-edge;
+  padding: 17px 30px 55px 30px;
 }
 
 .order__description {
@@ -45,13 +45,13 @@
 
   &--contacts {
     .order__legend {
-      margin-bottom: 4.5px;
+      margin-bottom: 4px;
     }
   }
 
   &--text {
     .order__legend {
-      margin-bottom: 22.5px;
+      margin-bottom: 22px;
     }
   }
 }
@@ -93,7 +93,7 @@
   &:active {
     .order__dot,
     .order__check {
-      border-color: rgba($color: $color-black, $alpha: 0.3);
+      border-color: rgba($color-black, 0.3);
     }
   }
 }
@@ -107,7 +107,7 @@
 
   &:checked {
     + .order__dot {
-      background-image: url("../../img/icons/input-radio.svg");
+      background-image: url("../img/icons/input-radio.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -115,7 +115,7 @@
 
   &:disabled {
     + .order__dot {
-      border-color: rgba($color: $color-black, $alpha: 0.3);
+      border-color: rgba($color-black, 0.3);
     }
 
     + .order__dot,
@@ -136,7 +136,7 @@
 
   &:checked {
     + .order__check {
-      background-image: url("../../img/icons/input-checkbox.svg");
+      background-image: url("../img/icons/input-checkbox.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -144,7 +144,7 @@
 
   &:disabled {
     + .order__check {
-      border-color: rgba($color: $color-black, $alpha: 0.3);
+      border-color: rgba($color-black, 0.3);
     }
 
     + .order__check,
@@ -178,7 +178,7 @@
 }
 
 .order__input-text {
-  width: 100%;
+  flex-grow: 1;
   padding: 17px 0;
 
   font-size: 17px;
@@ -189,8 +189,15 @@
   border: none;
   box-shadow: inset 0 -2px 0 $color-black;
 
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
   &::placeholder {
-    color: rgba($color: $color-black, $alpha: 0.3);
+    color: rgba($color-black, 0.3);
   }
 
   &:focus {
@@ -225,7 +232,7 @@
   border: 2px solid $color-charcoal;
 
   &::placeholder {
-    color: rgba($color: $color-black, $alpha: 0.3);
+    color: rgba($color-black, 0.3);
   }
 
   &:focus {

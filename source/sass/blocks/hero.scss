@@ -1,12 +1,12 @@
 .hero {
   background-color: $color-white-smoke;
-  background-image: url("../../img/hero-mobile@2x.jpg");
+  background-image: url("../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__title {
-  padding: 73px $indent-edge 120px $indent-edge;
+  padding: 73px 30px 120px 30px;
 
   font-size: 27px;
   text-align: center;
@@ -58,7 +58,7 @@
   left: 0;
 
   width: 100%;
-  padding: 24px 100px 31px $indent-edge;
+  padding: 24px 100px 31px 30px;
 
   background-color: $color-downy-1;
 

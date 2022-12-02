@@ -1,6 +1,10 @@
 .social {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .social__link {
@@ -19,7 +23,7 @@
 
   &:active {
     & .social__svg {
-      fill: rgba($color: $color-puerto-rico-2, $alpha: 0.3);
+      fill: rgba($color-puerto-rico-2, 0.3);
     }
   }
 }

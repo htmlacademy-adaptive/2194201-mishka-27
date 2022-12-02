@@ -1,5 +1,4 @@
-@import "variables.scss";
-@import "vendor/normalize.scss";
+@import "global/variables.scss";
 @import "global/reboot.scss";
 @import "global/utils.scss";
 @import "global/fonts.scss";
@@ -10,6 +9,7 @@
 @import "blocks/contacts.scss";
 @import "blocks/hero.scss";
 @import "blocks/inner-hero.scss";
+@import "blocks/social.scss";
 @import "blocks/main-footer.scss";
 @import "blocks/main-header.scss";
 @import "blocks/modal.scss";
@@ -17,4 +17,3 @@
 @import "blocks/popular.scss";
 @import "blocks/process.scss";
 @import "blocks/reviews.scss";
-@import "blocks/social.scss";

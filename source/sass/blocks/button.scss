@@ -7,9 +7,12 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  font-family: inherit;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
 
+  background-color: inherit;
   border: none;
   cursor: pointer;
 
@@ -39,7 +42,7 @@
     }
 
     &:active {
-      color: rgba($color: $color-white, $alpha: 0.3);
+      color: rgba($color-white, 0.3);
     }
   }
 
@@ -53,7 +56,7 @@
     }
 
     &:active {
-      color: rgba($color: $color-white, $alpha: 0.3);
+      color: rgba($color-white, 0.3);
     }
   }
 

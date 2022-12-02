@@ -6,7 +6,7 @@
   position: relative;
   z-index: 2;
 
-  padding: 0 $indent-edge;
+  padding: 0 30px;
 
   text-align: center;
 
@@ -35,7 +35,7 @@
 .main-header__button {
   position: absolute;
   top: 0;
-  right: $indent-edge;
+  right: 30px;
   bottom: 0;
 
   width: 40px;
@@ -125,8 +125,8 @@
   position: relative;
 
   display: block;
-  margin: 0 $indent-edge;
-  padding: 27.5px 0 27.5px 44px;
+  margin: 0 30px;
+  padding: 27px 0 27px 44px;
 
   font-weight: 700;
   font-size: 17px;
@@ -134,7 +134,7 @@
   color: $color-black;
 
   &:hover {
-    color: rgba($color: $color-black, $alpha: 0.6);
+    color: rgba($color-black, 0.6);
 
     & .main-header__svg {
       fill: $color-downy-1;
@@ -142,7 +142,7 @@
   }
 
   &:active {
-    color: rgba($color: $color-black, $alpha: 0.3);
+    color: rgba($color-black, 0.3);
   }
 }
 
@@ -154,5 +154,5 @@
 
   margin: auto;
 
-  fill: rgba($color: $color-black, $alpha: 0.2);
+  fill: rgba($color-black, 0.2);
 }

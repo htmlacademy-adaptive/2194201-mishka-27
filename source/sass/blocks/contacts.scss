@@ -1,5 +1,5 @@
 .contacts {
-  padding: 38px $indent-edge 39px $indent-edge;
+  padding: 38px 30px 39px 30px;
 }
 
 .contacts__content {
@@ -55,7 +55,7 @@
 
   &:active {
     &::after {
-      background-color: rgba($color: $color-downy-2, $alpha: 0.1);
+      background-color: rgba($color-downy-2, 0.1);
     }
   }
 }

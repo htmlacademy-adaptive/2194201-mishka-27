@@ -1,10 +1,10 @@
 .process {
-  padding: 15px $indent-edge 58px $indent-edge;
+  padding: 15px 30px 58px 30px;
 }
 
 .process__content {
   display: grid;
-  padding-top: 21.5px;
+  padding-top: 21px;
   padding-bottom: 33px;
 
   border: 1px solid $color-whisper-1;
@@ -21,7 +21,7 @@
 }
 
 .process__title {
-  padding: 0 34px 26.5px 34px;
+  padding: 0 34px 26px 34px;
 
   font-size: 17px;
   line-height: 24px;
