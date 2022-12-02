@@ -1,0 +1,70 @@
+.hero {
+  background-color: $color-white-smoke;
+  background-image: url("../img/hero-mobile@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__title {
+  padding: 73px 30px 120px 30px;
+
+  font-size: 27px;
+  text-align: center;
+}
+
+.hero__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.hero__item {
+  flex-grow: 1;
+
+  &:nth-child(even) {
+    .hero__text {
+      background-color: $color-puerto-rico-1;
+    }
+  }
+
+  &:hover:nth-child(even) {
+    .hero__text {
+      background-color: $color-puerto-rico-2;
+    }
+  }
+}
+
+.hero__link {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  min-height: 103px;
+
+  font-weight: 700;
+  font-size: 19px;
+  color: $color-white;
+
+  transition: 0.2s;
+}
+
+.hero__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 24px 100px 31px 30px;
+
+  background-color: $color-downy-1;
+
+  &:hover {
+    padding-bottom: 36px;
+
+    background-color: $color-downy-3;
+  }
+}

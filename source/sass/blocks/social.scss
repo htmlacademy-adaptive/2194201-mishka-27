@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 10px 7px;
+
+  text-align: center;
+
+  &:hover {
+    & .social__svg {
+      fill: $color-puerto-rico-2;
+    }
+  }
+
+  &:active {
+    & .social__svg {
+      fill: rgba($color-puerto-rico-2, 0.3);
+    }
+  }
+}
+
+.social__svg {
+  fill: $color-aubergine;
+}
