@@ -73,6 +73,10 @@
   @media (min-width: $vp-768) {
     min-height: 119px;
   }
+
+  &:focus {
+    z-index: 1;
+  }
 }
 
 .hero__text {
