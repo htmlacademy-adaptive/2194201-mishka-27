@@ -289,15 +289,13 @@
 }
 
 .main-header__text {
+  margin-left: 25px;
+
   &--search {
     @media (min-width: $vp-768) {
       display: none;
     }
   }
-}
-
-.main-header__text {
-  margin-left: 25px;
 }
 
 .main-header__delivery {
