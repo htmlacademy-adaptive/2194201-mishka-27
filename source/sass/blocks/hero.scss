@@ -1,8 +1,14 @@
 .hero {
-  background-color: $color-white-smoke;
+  background-color: $color-snow;
   background-image: url("../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: top -17px center;
+  background-size: 100%;
+
+  @media (min-width: $vp-768) {
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: top -55px center;
+  }
 }
 
 .hero__title {
@@ -10,6 +16,13 @@
 
   font-size: 27px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    padding: 100px 50px 372px 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .hero__list {
@@ -20,6 +33,12 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+    width: auto;
+    margin: 0 50px;
+  }
 }
 
 .hero__item {
@@ -50,6 +69,10 @@
   color: $color-white;
 
   transition: 0.2s;
+
+  @media (min-width: $vp-768) {
+    min-height: 119px;
+  }
 }
 
 .hero__text {
@@ -62,8 +85,15 @@
 
   background-color: $color-downy-1;
 
+  @media (min-width: $vp-768) {
+    padding: 25px 120px 34px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &:hover {
-    padding-bottom: 36px;
+    padding-bottom: 39px;
 
     background-color: $color-downy-3;
   }
