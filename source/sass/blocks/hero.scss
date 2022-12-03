@@ -1,11 +1,16 @@
 .hero {
   background-color: $color-snow;
+}
+
+.hero__wrapper {
   background-image: url("../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
   background-position: top -17px center;
   background-size: 100%;
 
   @media (min-width: $vp-768) {
+    width: $vp-768;
+    margin: 0 auto;
     padding: 100px 50px 0 50px;
 
     background-image: url("../img/hero-desktop.jpg");

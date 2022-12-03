@@ -5,7 +5,7 @@
 
   @media (min-width: $vp-768) {
     display: grid;
-    width: 768px;
+    width: $vp-768;
     margin: 0 auto;
     padding: 40px 50px 52px 50px;
 
