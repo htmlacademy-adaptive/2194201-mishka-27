@@ -6,6 +6,8 @@
   background-size: 100%;
 
   @media (min-width: $vp-768) {
+    padding: 100px 50px 0 50px;
+
     background-image: url("../img/hero-desktop.jpg");
     background-position: top -55px center;
   }
@@ -18,7 +20,8 @@
   text-align: center;
 
   @media (min-width: $vp-768) {
-    padding: 100px 50px 372px 50px;
+    padding: 0;
+    padding-bottom: 372px;
 
     font-size: 43px;
     line-height: 50px;
@@ -36,8 +39,7 @@
 
   @media (min-width: $vp-768) {
     flex-direction: row;
-    width: auto;
-    margin: 0 50px;
+    flex-wrap: wrap;
   }
 }
 
@@ -53,6 +55,36 @@
   &:hover:nth-child(even) {
     .hero__text {
       background-color: $color-puerto-rico-2;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    width: 50%;
+
+    &:nth-child(even) {
+      .hero__text {
+        background-color: $color-downy-1;
+      }
+    }
+
+    &:hover:nth-child(even) {
+      .hero__text {
+        background-color: $color-downy-3;
+      }
+    }
+
+    &:nth-child(4n + 2),
+    &:nth-child(4n - 1) {
+      .hero__text {
+        background-color: $color-puerto-rico-1;
+      }
+    }
+
+    &:hover:nth-child(4n + 2),
+    &:hover:nth-child(4n - 1) {
+      .hero__text {
+        background-color: $color-puerto-rico-2;
+      }
     }
   }
 }
