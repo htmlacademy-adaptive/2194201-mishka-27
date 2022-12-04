@@ -1,24 +1,87 @@
 .advantages {
   padding: 31px 30px 29px 30px;
+
+  @media (min-width: $vp-768) {
+    width: $vp-768;
+    margin: 0 auto;
+    padding: 55px 50px 90px 50px;
+  }
 }
 
 .advantages__title {
   margin-bottom: 28px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 41px;
+  }
 }
 
 .advantages__list {
+  display: grid;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+
+  @media (min-width: $vp-768) {
+    column-gap: 107px;
+
+    grid-template-columns: 1fr 1fr;
+    row-gap: 57px;
+  }
 }
 
 .advantages__item {
-  margin-bottom: 30px;
   padding-top: 51px;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: $color-black;
+
+  @media (min-width: $vp-768) {
+    padding-top: 56px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $vp-768) {
+    &--flower {
+      order: 1;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    &--money {
+      order: 3;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    &--heart {
+      order: 5;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    &--skein {
+      order: 2;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    &--rocket {
+      order: 4;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    &--gift {
+      order: 6;
+    }
+  }
 }

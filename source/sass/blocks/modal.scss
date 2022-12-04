@@ -34,6 +34,12 @@
   border: 1px solid $color-silver;
   box-shadow: 0 5px 10px rgba($color-black, 0.25);
   cursor: default;
+
+  @media (min-width: $vp-768) {
+    width: 566px;
+    max-width: inherit;
+    padding: 37px 108px 46px 108px;
+  }
 }
 
 .modal__title {
@@ -41,6 +47,13 @@
 
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 11px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .modal__description {
@@ -48,6 +61,12 @@
 
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 19px;
+
+    font-size: 17px;
+  }
 }
 
 .modal__radio-buttons {
@@ -82,7 +101,7 @@
 
 .modal__radio-text {
   width: 100%;
-  padding: 18px 10px;
+  padding: 16px 10px;
 
   font-weight: 700;
   font-size: 17px;

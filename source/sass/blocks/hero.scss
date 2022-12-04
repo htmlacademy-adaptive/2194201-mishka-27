@@ -1,8 +1,20 @@
 .hero {
-  background-color: $color-white-smoke;
+  background-color: $color-snow;
+}
+
+.hero__wrapper {
   background-image: url("../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: top -17px center;
+  background-size: 320px auto;
+
+  @media (min-width: $vp-768) {
+    padding: 100px 50px 0 50px;
+
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: top -55px center;
+    background-size: 768px auto;
+  }
 }
 
 .hero__title {
@@ -10,6 +22,14 @@
 
   font-size: 27px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+    padding-bottom: 372px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .hero__list {
@@ -20,6 +40,11 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .hero__item {
@@ -36,6 +61,36 @@
       background-color: $color-puerto-rico-2;
     }
   }
+
+  @media (min-width: $vp-768) {
+    width: 50%;
+
+    &:nth-child(even) {
+      .hero__text {
+        background-color: $color-downy-1;
+      }
+    }
+
+    &:hover:nth-child(even) {
+      .hero__text {
+        background-color: $color-downy-3;
+      }
+    }
+
+    &:nth-child(4n + 2),
+    &:nth-child(4n - 1) {
+      .hero__text {
+        background-color: $color-puerto-rico-1;
+      }
+    }
+
+    &:hover:nth-child(4n + 2),
+    &:hover:nth-child(4n - 1) {
+      .hero__text {
+        background-color: $color-puerto-rico-2;
+      }
+    }
+  }
 }
 
 .hero__link {
@@ -50,6 +105,14 @@
   color: $color-white;
 
   transition: 0.2s;
+
+  @media (min-width: $vp-768) {
+    min-height: 119px;
+  }
+
+  &:focus {
+    z-index: 1;
+  }
 }
 
 .hero__text {
@@ -62,8 +125,15 @@
 
   background-color: $color-downy-1;
 
+  @media (min-width: $vp-768) {
+    padding: 25px 120px 34px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &:hover {
-    padding-bottom: 36px;
+    padding-bottom: 39px;
 
     background-color: $color-downy-3;
   }

@@ -30,11 +30,13 @@
 .process__wrapper {
   position: relative;
 
-  width: max-content;
+  width: 100%;
   margin-bottom: 35px;
 }
 
 .process__image {
+  width: 100%;
+
   vertical-align: middle;
 }
 
