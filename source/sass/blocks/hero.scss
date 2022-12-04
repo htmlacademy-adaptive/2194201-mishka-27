@@ -15,6 +15,12 @@
     background-position: top -55px center;
     background-size: 768px auto;
   }
+
+  @media (min-width: $vp-1150) {
+    width: $vp-1150;
+    margin: 0 auto;
+    padding-top: 114px;
+  }
 }
 
 .hero__title {

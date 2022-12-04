@@ -4,6 +4,12 @@
   @media (min-width: $vp-768) {
     padding-bottom: 68px;
   }
+
+  @media (min-width: $vp-1150) {
+    width: calc($vp-1150 - 100px);
+    margin: 0 auto;
+    padding-bottom: 67px;
+  }
 }
 
 .reviews__wrapper {
@@ -17,6 +23,10 @@
     background-position: left center;
 
     grid-template-columns: auto 1fr auto;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 79px 0 96px 175px;
   }
 }
 
@@ -48,6 +58,11 @@
     grid-column: 1 / -1;
     grid-row: 2;
   }
+
+  @media (min-width: $vp-1150) {
+    margin-top: 35px;
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author {
@@ -64,6 +79,10 @@
 
     grid-column: 1;
     grid-row: 3;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 17px;
   }
 }
 

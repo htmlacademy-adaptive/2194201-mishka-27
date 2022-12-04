@@ -4,7 +4,11 @@
   @media (min-width: $vp-768) {
     width: $vp-768;
     margin: 0 auto;
-    padding: 55px 50px 90px 50px;
+    padding: 55px 50px 83px 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 68px 0 90px 0;
   }
 }
 
@@ -13,6 +17,10 @@
 
   @media (min-width: $vp-768) {
     margin-bottom: 41px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 39px;
   }
 }
 
@@ -31,6 +39,10 @@
 
     grid-template-columns: 1fr 1fr;
     row-gap: 57px;
+  }
+
+  @media (min-width: $vp-1150) {
+    column-gap: 115px;
   }
 }
 
