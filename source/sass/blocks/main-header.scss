@@ -8,8 +8,7 @@
 
     box-shadow: none;
 
-    grid-template-columns: 230px 1fr;
-    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 200px 1fr;
   }
 }
 
@@ -30,8 +29,6 @@
     padding: 0 0 0 50px;
 
     text-align: left;
-
-    background: transparent;
 
     grid-row: 1;
     grid-column: 1;
@@ -163,11 +160,9 @@
 
     display: grid;
 
-    background-color: $color-white;
-
     grid-row: 1;
     grid-column: 1 /-1;
-    grid-template-columns: 230px 1fr 310px;
+    grid-template-columns: 200px 1fr 310px;
   }
 
   &::before {
@@ -224,8 +219,6 @@
     justify-content: flex-end;
     width: 100%;
     padding-right: 19px;
-
-    background-color: $color-white;
 
     grid-row: 1;
     grid-column: 2 /-1;
