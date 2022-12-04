@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    width: $vp-1150;
+    width: calc($vp-1150 - 17px);
     margin: 0 auto;
     padding-top: 114px;
   }

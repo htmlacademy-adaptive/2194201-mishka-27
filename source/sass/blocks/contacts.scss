@@ -24,7 +24,7 @@
   line-height: 30px;
   column-gap: 20px;
 
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: auto 1fr;
   row-gap: 20px;
 
   @media (min-width: $vp-768) {
@@ -34,7 +34,7 @@
     font-size: 17px;
 
     row-gap: 0;
-    grid-template-columns: max-content 1fr max-content 1fr;
+    grid-template-columns: auto 1fr auto 1fr;
   }
 
   @media (min-width: $vp-1150) {
@@ -43,7 +43,7 @@
     column-gap: 0;
 
     grid-column: 2;
-    grid-template-columns: max-content auto;
+    grid-template-columns: 79px 216px;
     grid-template-rows: repeat(3, min-content);
   }
 }
