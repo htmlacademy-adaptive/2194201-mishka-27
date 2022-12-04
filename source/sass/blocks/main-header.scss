@@ -51,9 +51,6 @@
     margin: 0;
   }
 
-  @media (min-width: $vp-1150) {
-  }
-
   &:hover {
     opacity: 0.6;
   }
@@ -296,7 +293,6 @@
   display: none;
 
   @media (min-width: $vp-1150) {
-    display: block;
     display: flex;
     flex-wrap: wrap;
     padding-top: 10px;
