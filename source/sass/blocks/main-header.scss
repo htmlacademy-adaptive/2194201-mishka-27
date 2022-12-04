@@ -150,10 +150,6 @@
 
   transition: transform 0.2s ease-out;
 
-  .is-open & {
-    transform: translateY(100%);
-  }
-
   @media (min-width: $vp-768) {
     position: static;
     z-index: 2;
@@ -176,6 +172,10 @@
 
     grid-row: 2;
     grid-column: 1 / -1;
+  }
+
+  .is-open & {
+    transform: translateY(100%);
   }
 }
 
