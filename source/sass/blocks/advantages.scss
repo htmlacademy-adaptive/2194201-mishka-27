@@ -2,7 +2,7 @@
   padding: 31px 30px 29px 30px;
 
   @media (min-width: $vp-768) {
-    width: $vp-768;
+    width: calc($vp-768 - 17px);
     margin: 0 auto;
     padding: 55px 50px 83px 50px;
   }
