@@ -15,6 +15,10 @@
 
   grid-template-columns: 1fr;
   row-gap: 30px;
+
+  @media (min-width: $vp-768) {
+    row-gap: 55px;
+  }
 }
 
 .catalog__item {
@@ -162,6 +166,7 @@
   justify-self: end;
 
   @media (min-width: $vp-768) {
+    align-self: start;
     margin: 0;
     padding: 0;
 
