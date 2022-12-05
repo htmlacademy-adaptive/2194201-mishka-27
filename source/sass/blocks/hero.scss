@@ -140,6 +140,8 @@
 
   background-color: $color-downy-1;
 
+  transition: padding 0.2s;
+
   @media (min-width: $vp-768) {
     padding: 25px 120px 34px 36px;
 

@@ -2,6 +2,10 @@
   padding: 0 30px;
 
   background-color: $color-white-smoke;
+
+  @media (min-width: $vp-768) {
+    padding: 0 50px;
+  }
 }
 
 .inner-hero__title {
@@ -9,4 +13,11 @@
 
   font-size: 27px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    padding: 56px 0 75px 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
