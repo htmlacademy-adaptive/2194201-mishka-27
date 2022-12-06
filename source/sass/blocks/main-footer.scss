@@ -4,10 +4,33 @@
   padding: 25px 30px 23px 30px;
 
   background-color: $color-white-smoke;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 51px 50px 58px 50px;
+  }
 }
 
 .main-footer__logo {
   display: none;
+
+  @media (min-width: $vp-768) {
+    display: block;
+
+    &:hover {
+      & .main-footer__svg {
+        fill: $color-puerto-rico-2;
+      }
+    }
+
+    &:active {
+      & .main-footer__svg {
+        fill: rgba($color-puerto-rico-2, 0.3);
+      }
+    }
+  }
 }
 
 .main-footer__social {
@@ -18,6 +41,13 @@
   padding-bottom: 20px;
 
   border-bottom: 1px solid $color-whisper-2;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+  }
 }
 
 .main-footer__social-item {
@@ -37,19 +67,19 @@
   color: $color-black;
 
   &:hover {
-    & .main-footer__svg {
+    & .main-footer__svg-copyright {
       fill: $color-puerto-rico-2;
     }
   }
 
   &:active {
-    & .main-footer__svg {
+    & .main-footer__svg-copyright {
       fill: rgba($color-puerto-rico-2, 0.3);
     }
   }
 }
 
-.main-footer__svg {
+.main-footer__svg-copyright {
   margin-left: 27px;
 
   fill: $color-downy-1;

@@ -16,6 +16,10 @@
   border: none;
   cursor: pointer;
 
+  @media (min-width: $vp-768) {
+    font-size: 17px;
+  }
+
   &--primary {
     color: $color-charcoal;
 

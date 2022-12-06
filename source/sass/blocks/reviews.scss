@@ -1,9 +1,46 @@
 .reviews {
-  padding: 29px 30px 45px 30px;
+  padding-bottom: 45px;
+
+  @media (min-width: $vp-768) {
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: calc($vp-1150 - 100px);
+    margin: 0 auto;
+    padding-bottom: 67px;
+  }
+}
+
+.reviews__wrapper {
+  padding: 29px 30px 0 30px;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    padding: 73px 50px 47px 50px;
+
+    background-image: url("../../img/review-table.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    grid-template-columns: auto 1fr auto;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 79px 0 96px 175px;
+  }
 }
 
 .reviews__title {
   margin-bottom: 14px;
+
+  @media (min-width: $vp-768) {
+    align-self: end;
+    margin-bottom: 0;
+
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 .reviews__description {
@@ -11,6 +48,22 @@
   margin-bottom: 33px;
 
   line-height: 30px;
+
+  @media (min-width: $vp-768) {
+    margin-top: 38px;
+    margin-bottom: 61px;
+
+    font-size: 17px;
+    line-height: 30px;
+
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-top: 35px;
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author {
@@ -19,6 +72,19 @@
   margin-bottom: 30px;
 
   font-size: 17px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 0;
+
+    font-size: 18px;
+
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 17px;
+  }
 }
 
 .reviews__name {
@@ -31,14 +97,28 @@
 .reviews__controls {
   display: flex;
   margin-bottom: 38px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 0;
+
+    justify-self: end;
+    grid-column-end: -1;
+    grid-row: 3;
+  }
 }
 
 .reviews__control {
-  width: 130px;
+  width: 50%;
   height: 52px;
   padding: 0;
 
   border: 1px solid $color-whisper-1;
+
+  @media (min-width: $vp-768) {
+    width: 75px;
+
+    border: none;
+  }
 
   &--right {
     border-left: none;
@@ -48,5 +128,16 @@
     opacity: 0.3;
 
     pointer-events: none;
+  }
+}
+
+.reviews__link {
+  @media (min-width: $vp-768) {
+    align-self: end;
+    width: 187px;
+    margin-bottom: 10px;
+
+    grid-column-end: -1;
+    grid-row: 1;
   }
 }

@@ -2,10 +2,45 @@
   display: flex;
   flex-direction: column;
   padding: 31px 30px 36px 30px;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    padding: 40px 50px 52px 50px;
+
+    column-gap: 42px;
+
+    grid-template-columns: 1fr auto;
+  }
+
+  @media (min-width: $vp-1150) {
+    display: grid;
+    width: calc($vp-1150 - 100px);
+    margin: 0 auto;
+    padding: 54px 0 58px 0;
+
+    gap: 0;
+    grid-template-columns: 175px 292px 1fr 525px;
+  }
 }
 
 .popular__title {
   margin-bottom: 3px;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+    padding-right: 120px;
+
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  @media (min-width: $vp-1150) {
+    z-index: 1;
+
+    padding-top: 61px;
+
+    grid-column: 2 / -1;
+  }
 }
 
 .popular__benefit {
@@ -16,11 +51,53 @@
   line-height: 20px;
   color: $color-downy-1;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    align-self: center;
+    width: min-content;
+    margin: 0;
+    margin-right: 20px;
+
+    line-height: 17px;
+    text-align: center;
+
+    grid-column-end: -1;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  @media (min-width: $vp-1150) {
+    align-self: start;
+    margin-right: 0;
+    padding-top: 73px;
+
+    grid-column: 1;
+    grid-row: 1 / 6;
+    justify-self: center;
+  }
 }
 
 .popular__description {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $vp-768) {
+    margin-top: 38px;
+    margin-bottom: 48px;
+
+    font-size: 17px;
+    line-height: 30px;
+
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-top: 35px;
+    margin-bottom: 60px;
+
+    grid-column: 2;
+  }
 }
 
 .popular__parameters {
@@ -28,6 +105,19 @@
   margin-bottom: 20px;
 
   line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 57px;
+
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 124px;
+
+    grid-column: 2;
+  }
 }
 
 .popular__parameters-wrapper {
@@ -47,9 +137,26 @@
 }
 
 .popular__image {
+  width: 100%;
   margin-bottom: 25px;
 
   vertical-align: middle;
+
+  @media (min-width: $vp-768) {
+    align-self: end;
+    margin: 0;
+
+    grid-column: 2;
+    grid-row: 2 / 6;
+  }
+
+  @media (min-width: $vp-1150) {
+    align-self: stretch;
+
+    grid-column: auto/-1;
+    grid-row: 1/6;
+    object-fit: cover;
+  }
 }
 
 .popular__price {
@@ -57,4 +164,30 @@
 
   font-size: 17px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 33px;
+
+    font-size: 20px;
+
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-column: 2;
+  }
+}
+
+.popular__link {
+  @media (min-width: $vp-768) {
+    align-self: end;
+
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-column: 2;
+  }
 }
