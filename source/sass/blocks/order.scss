@@ -4,6 +4,10 @@
   @media (min-width: $vp-768) {
     padding: 54px 0 50px 0;
   }
+
+  @media (min-width: $vp-1150) {
+    padding-top: 98px;
+  }
 }
 
 .order__description {
@@ -17,6 +21,12 @@
 
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 702px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -55,7 +65,17 @@
     grid-template-columns: 179px auto;
   }
 
+  @media (min-width: $vp-1150) {
+    width: $vp-1150;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &--radio {
+    @media (min-width: $vp-1150) {
+      margin-top: 62px;
+    }
+
     .order__legend {
       margin-bottom: 30px;
 
@@ -132,6 +152,10 @@
       @media (min-width: $vp-768) {
         width: 100%;
       }
+
+      @media (min-width: $vp-1150) {
+        width: 650px;
+      }
     }
   }
 
@@ -153,6 +177,10 @@
     .order__label {
       @media (min-width: $vp-768) {
         width: 100%;
+      }
+
+      @media (min-width: $vp-1150) {
+        width: 650px;
       }
     }
   }
@@ -185,7 +213,13 @@
 
     width: 179px;
     padding: 0;
-    padding-right: 20px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $vp-1150) {
+    left: 100px;
+
+    width: 129px;
   }
 }
 
@@ -204,6 +238,12 @@
     .order__label {
       grid-column: auto;
     }
+  }
+
+  @media (min-width: $vp-1150) {
+    column-gap: 92px;
+
+    grid-template-columns: repeat(3, auto);
   }
 }
 
@@ -224,6 +264,10 @@
       flex-direction: row;
       align-items: center;
       width: 100%;
+    }
+
+    @media (min-width: $vp-1150) {
+      width: 650px;
     }
 
     &:not(:last-child) {
@@ -335,6 +379,10 @@
     height: 52px;
     margin-right: 26px;
   }
+
+  @media (min-width: $vp-1150) {
+    margin-right: 28px;
+  }
 }
 
 .order__check {
@@ -422,6 +470,10 @@
     grid-column: 2;
   }
 
+  @media (min-width: $vp-1150) {
+    width: 650px;
+  }
+
   &::placeholder {
     color: rgba($color-black, 0.3);
   }
@@ -442,6 +494,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    position: relative;
+    left: -20px;
+
+    width: 650px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
