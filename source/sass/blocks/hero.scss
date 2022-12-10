@@ -9,6 +9,8 @@
   background-size: 320px auto;
 
   @media (min-width: $vp-768) {
+    position: relative;
+
     padding: 100px 50px 0 50px;
 
     background-image: url("../img/hero-desktop.jpg");
@@ -44,6 +46,23 @@
 
     font-size: 53px;
     line-height: 57px;
+  }
+}
+
+.hero__delivery {
+  display: none;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+
+    display: block;
+    width: 35%;
+    max-height: 72px;
+    overflow: hidden;
+
+    text-align: right;
   }
 }
 
