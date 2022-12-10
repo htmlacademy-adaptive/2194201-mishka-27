@@ -179,7 +179,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    width: calc($vp-1150 - 18px);
+    width: 1150px;
     margin: 0 auto;
 
     grid-template-columns: 1fr 200px 1fr;

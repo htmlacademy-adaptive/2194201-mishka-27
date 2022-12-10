@@ -1,15 +1,22 @@
 .main-footer {
+  background-color: $color-white-smoke;
+}
+
+.main-footer__wrapper {
   display: flex;
   flex-direction: column;
   padding: 25px 30px 23px 30px;
-
-  background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 51px 50px 58px 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 1150px;
+    margin: 0 auto;
   }
 }
 
