@@ -1,11 +1,15 @@
 "use strict";
 
-let headerContainer = document.querySelector(".main-header");
-let headerButtonMenu = document.querySelector(".main-header__button");
-let popularButton = document.querySelector(".popular__link");
-let basketButtons = document.querySelectorAll(".catalog__link-basket");
-let modalOverlay = document.querySelector(".modal");
-let modalContainer = document.querySelector(".modal__container");
+const headerContainer = document.querySelector(".main-header");
+const headerButtonMenu = document.querySelector(".main-header__button");
+const popularButton = document.querySelector(".popular__link");
+const basketButtons = document.querySelectorAll(".catalog__link-basket");
+const modalOverlay = document.querySelector(".modal");
+const modalContainer = document.querySelector(".modal__container");
+
+if (headerContainer.classList.contains("is-open")) {
+  headerContainer.classList.remove("is-open");
+}
 
 if (popularButton) {
   popularButton.addEventListener("click", openModal);
