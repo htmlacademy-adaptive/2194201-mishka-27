@@ -2,7 +2,9 @@
   padding: 38px 30px 39px 30px;
 
   @media (min-width: $vp-768) {
-    padding: 46px 0 57px 0;
+    position: relative;
+
+    padding: 70px 0 57px 0;
   }
 
   @media (min-width: $vp-1150) {
@@ -63,10 +65,26 @@
 .contacts__flag {
   display: none;
 
-  @media (min-width: $vp-1150) {
+  @media (min-width: $vp-768) {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
     display: block;
+    width: 47px;
+    height: 81px;
+
+    background-image: url("../img/icons/flag.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $vp-1150) {
+    position: static;
+
+    margin-top: 60px;
 
     grid-column: 1;
+    justify-self: center;
   }
 }
 
