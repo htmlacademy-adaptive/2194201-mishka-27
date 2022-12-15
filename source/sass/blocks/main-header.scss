@@ -172,6 +172,10 @@
 
   transition: transform 0.2s ease-out;
 
+  .no-js & {
+    position: relative;
+  }
+
   @media (min-width: $vp-768) {
     position: relative;
   }
