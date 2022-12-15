@@ -3,18 +3,11 @@
   flex-direction: column;
   padding: 31px 30px 36px 30px;
 
-  background-image: url("../img/zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-position: center bottom;
-  background-size: 320px;
-
   @media (min-width: $vp-768) {
     display: grid;
     padding: 40px 50px 52px 50px;
 
     column-gap: 42px;
-
-    background-size: 772px;
 
     grid-template-columns: 1fr auto;
   }
@@ -24,8 +17,6 @@
     width: 1050px;
     margin: 0 auto;
     padding: 54px 0 58px 0;
-
-    background-size: 1050px;
 
     gap: 0;
     grid-template-columns: 175px 292px 1fr 525px;
