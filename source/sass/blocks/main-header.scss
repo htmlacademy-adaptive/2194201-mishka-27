@@ -18,7 +18,7 @@
 
 .main-header__inner {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   padding: 0 30px;
 
@@ -163,7 +163,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 
   width: 100%;
 
@@ -377,7 +377,7 @@
   &:hover {
     color: rgba($color-black, 0.6);
 
-    & .main-header__svg {
+    .main-header__svg {
       fill: $color-downy-1;
     }
   }

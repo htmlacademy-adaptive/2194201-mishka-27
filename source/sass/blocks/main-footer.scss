@@ -27,13 +27,13 @@
     display: block;
 
     &:hover {
-      & .main-footer__svg {
+      .main-footer__svg {
         fill: $color-puerto-rico-2;
       }
     }
 
     &:active {
-      & .main-footer__svg {
+      .main-footer__svg {
         fill: rgba($color-puerto-rico-2, 0.3);
       }
     }
@@ -74,13 +74,13 @@
   color: $color-black;
 
   &:hover {
-    & .main-footer__svg-copyright {
+    .main-footer__svg-copyright {
       fill: $color-puerto-rico-2;
     }
   }
 
   &:active {
-    & .main-footer__svg-copyright {
+    .main-footer__svg-copyright {
       fill: rgba($color-puerto-rico-2, 0.3);
     }
   }

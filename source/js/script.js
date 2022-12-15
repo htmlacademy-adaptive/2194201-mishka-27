@@ -2,8 +2,8 @@ const html = document.querySelector("html");
 const headerContainer = document.querySelector(".main-header");
 const headerButtonMenu = document.querySelector(".main-header__button");
 const modalOpenLinks = document.querySelectorAll(".modal-link");
-const modalOverlay = document.querySelector(".modal");
-const modalContainer = document.querySelector(".modal__container");
+const modalContainer = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal__overlay");
 
 const openMainMenu = () => {
   headerContainer.classList.toggle("is-open");
@@ -11,13 +11,13 @@ const openMainMenu = () => {
 
 const openModal = (event) => {
   event.preventDefault();
-  modalOverlay.classList.add("is-open");
+  modalContainer.classList.add("is-open");
 
   modalOverlay.addEventListener("click", closeModal);
 };
 
 const closeModal = () => {
-  modalOverlay.classList.remove("is-open");
+  modalContainer.classList.remove("is-open");
   modalOverlay.removeEventListener("click", closeModal);
 };
 

@@ -16,13 +16,13 @@
   text-align: center;
 
   &:hover {
-    & .social__svg {
+    .social__svg {
       fill: $color-puerto-rico-2;
     }
   }
 
   &:active {
-    & .social__svg {
+    .social__svg {
       fill: rgba($color-puerto-rico-2, 0.3);
     }
   }
