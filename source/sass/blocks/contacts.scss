@@ -2,12 +2,14 @@
   padding: 38px 30px 39px 30px;
 
   @media (min-width: $vp-768) {
-    padding: 46px 0 57px 0;
+    position: relative;
+
+    padding: 70px 0 57px 0;
   }
 
   @media (min-width: $vp-1150) {
     display: grid;
-    width: calc($vp-1150 - 100px);
+    width: 1050px;
     margin: 0 auto;
     padding: 71px 0 105px 0;
 
@@ -24,7 +26,7 @@
   line-height: 30px;
   column-gap: 20px;
 
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(auto, 150px) 1fr;
   row-gap: 20px;
 
   @media (min-width: $vp-768) {
@@ -40,7 +42,7 @@
   @media (min-width: $vp-1150) {
     padding: 0;
 
-    column-gap: 0;
+    column-gap: 25px;
 
     grid-column: 2;
     grid-template-columns: 79px 216px;
@@ -63,10 +65,26 @@
 .contacts__flag {
   display: none;
 
-  @media (min-width: $vp-1150) {
+  @media (min-width: $vp-768) {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
     display: block;
+    width: 47px;
+    height: 81px;
+
+    background-image: url("../img/icons/flag.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $vp-1150) {
+    position: static;
+
+    margin-top: 60px;
 
     grid-column: 1;
+    justify-self: center;
   }
 }
 
@@ -76,17 +94,20 @@
 }
 
 .contacts__email-text {
+  word-break: break-all;
+
   @media (min-width: $vp-768) {
     grid-column: 1;
   }
 
   @media (min-width: $vp-1150) {
-    margin-right: 25px;
     margin-bottom: 25px;
   }
 }
 
 .contacts__address-text {
+  word-break: break-all;
+
   @media (min-width: $vp-768) {
     grid-column: 3;
   }
@@ -103,6 +124,8 @@
 
 .contacts__link-mailto {
   position: relative;
+
+  align-self: start;
 
   color: $color-charcoal;
 
@@ -162,6 +185,7 @@
   }
 
   @media (min-width: $vp-1150) {
+    height: 100%;
     margin-bottom: 0;
     margin-left: 59px;
 
@@ -172,6 +196,10 @@
 
 .contacts__iframe {
   width: 100%;
+
+  @media (min-width: $vp-1150) {
+    height: 100%;
+  }
 }
 
 .contacts__link {

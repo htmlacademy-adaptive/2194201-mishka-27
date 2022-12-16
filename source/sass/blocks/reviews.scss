@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    width: calc($vp-1150 - 100px);
+    width: 1050px;
     margin: 0 auto;
     padding-bottom: 67px;
   }
@@ -108,20 +108,54 @@
 }
 
 .reviews__control {
+  position: relative;
+
   width: 50%;
   height: 52px;
   padding: 0;
 
   border: 1px solid $color-whisper-1;
 
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 50px;
+    height: 26px;
+
+    background-image: url("../img/icons/huge-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $vp-768) {
     width: 75px;
 
     border: none;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   &--right {
     border-left: none;
+
+    &::before {
+      transform: scale(-1, 1);
+    }
   }
 
   &:disabled {
