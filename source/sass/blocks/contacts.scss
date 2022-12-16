@@ -26,7 +26,7 @@
   line-height: 30px;
   column-gap: 20px;
 
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(auto, 150px) 1fr;
   row-gap: 20px;
 
   @media (min-width: $vp-768) {
@@ -42,7 +42,7 @@
   @media (min-width: $vp-1150) {
     padding: 0;
 
-    column-gap: 0;
+    column-gap: 25px;
 
     grid-column: 2;
     grid-template-columns: 79px 216px;
@@ -94,17 +94,20 @@
 }
 
 .contacts__email-text {
+  word-break: break-all;
+
   @media (min-width: $vp-768) {
     grid-column: 1;
   }
 
   @media (min-width: $vp-1150) {
-    margin-right: 25px;
     margin-bottom: 25px;
   }
 }
 
 .contacts__address-text {
+  word-break: break-all;
+
   @media (min-width: $vp-768) {
     grid-column: 3;
   }
@@ -121,6 +124,8 @@
 
 .contacts__link-mailto {
   position: relative;
+
+  align-self: start;
 
   color: $color-charcoal;
 
@@ -173,6 +178,7 @@
 
 .contacts__map {
   height: 457px;
+  height: 100%;
   margin-bottom: 42px;
 
   @media (min-width: $vp-768) {
@@ -190,6 +196,10 @@
 
 .contacts__iframe {
   width: 100%;
+
+  @media (min-width: $vp-1150) {
+    height: 100%;
+  }
 }
 
 .contacts__link {

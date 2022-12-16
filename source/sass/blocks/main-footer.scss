@@ -66,6 +66,7 @@
   align-items: center;
   align-self: center;
   width: fit-content;
+  max-width: 400px;
   padding: 5px;
 
   font-weight: 700;
@@ -87,6 +88,7 @@
 }
 
 .main-footer__svg-copyright {
+  flex-shrink: 0;
   margin-left: 27px;
 
   fill: $color-downy-1;
