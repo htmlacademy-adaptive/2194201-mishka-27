@@ -178,7 +178,6 @@
 
 .contacts__map {
   height: 457px;
-  height: 100%;
   margin-bottom: 42px;
 
   @media (min-width: $vp-768) {
@@ -186,6 +185,7 @@
   }
 
   @media (min-width: $vp-1150) {
+    height: 100%;
     margin-bottom: 0;
     margin-left: 59px;
 
