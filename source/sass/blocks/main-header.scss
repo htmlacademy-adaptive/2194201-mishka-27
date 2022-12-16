@@ -4,15 +4,10 @@
   box-shadow: 0 1px 0 $color-whisper-1, inset 0 1px 0 $color-whisper-1;
 
   @media (min-width: $vp-768) {
+    overflow: hidden;
+
+    background-color: $color-snow;
     box-shadow: none;
-  }
-
-  @media (min-width: $vp-1150) {
-    display: grid;
-
-    border-bottom: 1px solid rgba($color-black, 0.1);
-
-    grid-template-columns: 1fr 1150px 1fr;
   }
 }
 
@@ -176,53 +171,43 @@
     position: relative;
   }
 
-  @media (min-width: $vp-768) {
-    position: relative;
-  }
-
-  @media (min-width: $vp-1150) {
-    grid-column: 2;
-  }
-
   .is-open & {
     transform: translateY(100%);
   }
 
   @media (min-width: $vp-768) {
+    position: relative;
+
+    display: grid;
+
+    background-color: transparent;
+
+    grid-template-columns: 1fr 1fr;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -100vw;
+
+      width: 200vw;
+      height: 1px;
+
+      background-color: $color-whisper-2;
+
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
     .is-open & {
       transform: translateY(0);
 
       transition: 0s;
     }
   }
-}
-
-.main-header__inner-lists {
-  @media (min-width: $vp-768) {
-    display: grid;
-
-    grid-template-columns: 1fr 0.7fr;
-
-    &::before {
-      content: "";
-      left: 0;
-
-      width: 100%;
-      height: 1px;
-
-      background-color: rgba($color-black, 0.1);
-
-      grid-row: 2;
-      grid-column: 1 / -1;
-    }
-  }
 
   @media (min-width: $vp-1150) {
-    grid-template-columns: 490px 170px 490px;
-
-    &::before {
-      display: none;
-    }
+    width: 1150px;
+    margin: 0 auto;
   }
 }
 
@@ -237,16 +222,10 @@
 
 .main-header__site-list {
   @media (min-width: $vp-768) {
-    position: absolute;
-    top: 100%;
-    left: 50px;
-
     display: flex;
     flex-wrap: wrap;
-    width: 53%;
-    max-height: 90px;
     margin-top: 17px;
-    overflow: hidden;
+    margin-left: 50px;
 
     .main-header__item {
       margin-right: 26px;
@@ -262,13 +241,29 @@
   }
 
   @media (min-width: $vp-1150) {
-    position: static;
+    position: relative;
 
     align-self: start;
-    width: auto;
-    max-height: none;
-    margin-top: 0;
+    margin: 0;
+    padding-right: 90px;
     padding-left: 19px;
+
+    background-color: transparent;
+    border-bottom: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      z-index: -1;
+
+      width: 200vw;
+      height: 100%;
+
+      background-color: $color-white;
+      border-bottom: 1px solid $color-whisper-2;
+    }
 
     .main-header__item {
       margin-right: 0;
@@ -293,11 +288,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    width: 77%;
+    width: 100%;
     padding-right: 19px;
+    padding-left: 170px;
+
+    background-color: $color-white;
 
     grid-row: 1;
-    grid-column: 1 /-1;
+    grid-column: 1/-1;
     justify-self: end;
 
     .main-header__link {
@@ -306,10 +304,28 @@
   }
 
   @media (min-width: $vp-1150) {
-    align-self: start;
-    width: auto;
+    position: relative;
 
-    grid-column: 3;
+    align-self: start;
+    padding-left: 90px;
+
+    background-color: transparent;
+    border-bottom: none;
+
+    grid-column: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      z-index: -1;
+
+      width: 200vw;
+      height: 100%;
+
+      background-color: $color-white;
+    }
   }
 }
 
@@ -317,16 +333,10 @@
   display: none;
 
   @media (min-width: $vp-1150) {
-    position: absolute;
-    top: 100%;
-    left: 50px;
-
     display: flex;
     flex-wrap: wrap;
-    width: 58%;
-    max-height: 90px;
     margin-top: 20px;
-    overflow: hidden;
+    margin-left: 50px;
 
     .main-header__item {
       margin-right: 35px;
@@ -405,18 +415,12 @@
   display: none;
 
   @media (min-width: $vp-768) {
-    position: absolute;
-    top: 100%;
-    right: 50px;
-
     display: block;
-    width: 33%;
-    max-height: 100px;
+    margin: 0;
     margin-top: 17px;
-    overflow: hidden;
+    margin-right: 50px;
 
     text-align: right;
-    color: $color-charcoal;
 
     &:hover {
       color: rgba($color-black, 0.6);
@@ -429,5 +433,7 @@
 
   @media (min-width: $vp-1150) {
     margin-top: 22px;
+
+    grid-column: 2;
   }
 }
