@@ -15,9 +15,11 @@
   <header class="main-header">
     <div class="main-header__inner">
       <a class="main-header__logo" href="/" aria-label="Перейти на главную страницу.">
-        <img class="main-header__image main-header__image--logo-mobile" src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип магазина 'Мишка'.">
-        <img class="main-header__image main-header__image--logo-tablet" src="img/icons/logo-tablet.svg" width="114" height="46" alt="Логотип магазина 'Мишка'.">
-        <img class="main-header__image main-header__image--logo-desktop" src="img/icons/logo-desktop.svg" width="149" height="72" alt="Логотип магазина 'Мишка'.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+          <img class="main-header__image" src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип магазина 'Мишка'.">
+        </picture>
       </a>
       <button class="main-header__button" type="button" aria-label="Открыть главное меню.">
         <span class="main-header__button-line"></span>
