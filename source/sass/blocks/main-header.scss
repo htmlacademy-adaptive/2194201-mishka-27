@@ -109,6 +109,10 @@
   border: none;
   cursor: pointer;
 
+  .no-js & {
+    display: none;
+  }
+
   &:disabled {
     opacity: 0.3;
 
@@ -232,6 +236,7 @@
 
     .main-header__item {
       margin-right: 26px;
+      margin-bottom: 2px;
 
       &:last-child {
         margin-right: 0;
@@ -250,6 +255,10 @@
     margin: 0;
     padding-right: 90px;
     padding-left: 19px;
+
+    .main-header__item {
+      margin-bottom: 0;
+    }
 
     &::before {
       content: "";
@@ -336,6 +345,7 @@
 
     .main-header__item {
       margin-right: 35px;
+      margin-bottom: 2px;
 
       &:last-child {
         margin-right: 0;
