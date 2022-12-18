@@ -1,15 +1,22 @@
 .main-footer {
+  background-color: $color-white-smoke;
+}
+
+.main-footer__wrapper {
   display: flex;
   flex-direction: column;
   padding: 25px 30px 23px 30px;
-
-  background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 51px 50px 58px 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 1150px;
+    margin: 0 auto;
   }
 }
 
@@ -20,13 +27,13 @@
     display: block;
 
     &:hover {
-      & .main-footer__svg {
+      .main-footer__svg {
         fill: $color-puerto-rico-2;
       }
     }
 
     &:active {
-      & .main-footer__svg {
+      .main-footer__svg {
         fill: rgba($color-puerto-rico-2, 0.3);
       }
     }
@@ -59,6 +66,7 @@
   align-items: center;
   align-self: center;
   width: fit-content;
+  max-width: 400px;
   padding: 5px;
 
   font-weight: 700;
@@ -67,19 +75,20 @@
   color: $color-black;
 
   &:hover {
-    & .main-footer__svg-copyright {
+    .main-footer__svg-copyright {
       fill: $color-puerto-rico-2;
     }
   }
 
   &:active {
-    & .main-footer__svg-copyright {
+    .main-footer__svg-copyright {
       fill: rgba($color-puerto-rico-2, 0.3);
     }
   }
 }
 
 .main-footer__svg-copyright {
+  flex-shrink: 0;
   margin-left: 27px;
 
   fill: $color-downy-1;

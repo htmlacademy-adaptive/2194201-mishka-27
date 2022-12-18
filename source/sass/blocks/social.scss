@@ -1,5 +1,6 @@
 .social {
   display: flex;
+  flex-shrink: 0;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -16,13 +17,13 @@
   text-align: center;
 
   &:hover {
-    & .social__svg {
+    .social__svg {
       fill: $color-puerto-rico-2;
     }
   }
 
   &:active {
-    & .social__svg {
+    .social__svg {
       fill: rgba($color-puerto-rico-2, 0.3);
     }
   }

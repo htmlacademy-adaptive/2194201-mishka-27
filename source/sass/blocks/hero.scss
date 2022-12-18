@@ -1,5 +1,36 @@
 .hero {
+  position: relative;
+
   background-color: $color-snow;
+
+  @media (min-width: $vp-768) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      z-index: 1;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: bottom center;
+      background-size: 770px 24px;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: $vp-1150) {
+    &::after {
+      bottom: -17px;
+
+      height: 34px;
+
+      background-size: 1250px 34px;
+    }
+  }
 }
 
 .hero__wrapper {
@@ -9,11 +40,19 @@
   background-size: 320px auto;
 
   @media (min-width: $vp-768) {
-    padding: 100px 50px 0 50px;
+    position: relative;
+
+    padding: 155px 50px 0 50px;
 
     background-image: url("../img/hero-desktop.jpg");
     background-position: top -55px center;
     background-size: 768px auto;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 1150px;
+    margin: 0 auto;
+    padding-top: 158px;
   }
 }
 
@@ -29,6 +68,15 @@
 
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 700px;
+    margin: 0 auto;
+    padding-bottom: 355px;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -125,16 +173,70 @@
 
   background-color: $color-downy-1;
 
-  @media (min-width: $vp-768) {
-    padding: 25px 120px 34px 36px;
+  transition: padding 0.2s;
 
-    font-size: 20px;
-    line-height: 30px;
+  &--interior {
+    &::after {
+      top: 18px;
+      right: 42px;
+
+      width: 40px;
+      height: 62px;
+
+      background-image: url("../img/icons/interior.svg");
+
+      @media (min-width: $vp-768) {
+        top: 28px;
+      }
+    }
+  }
+
+  &--toys {
+    &::after {
+      top: 28px;
+      right: 33px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/icons/toys.svg");
+
+      @media (min-width: $vp-768) {
+        top: 30px;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+    transition: opacity 0.2s;
   }
 
   &:hover {
     padding-bottom: 39px;
 
     background-color: $color-downy-3;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 25px 120px 34px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }

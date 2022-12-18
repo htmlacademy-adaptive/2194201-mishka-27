@@ -2,9 +2,13 @@
   padding: 31px 30px 29px 30px;
 
   @media (min-width: $vp-768) {
-    width: $vp-768;
+    width: 751px;
     margin: 0 auto;
-    padding: 55px 50px 90px 50px;
+    padding: 55px 50px 83px 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 68px 0 90px 0;
   }
 }
 
@@ -13,6 +17,10 @@
 
   @media (min-width: $vp-768) {
     margin-bottom: 41px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 39px;
   }
 }
 
@@ -32,15 +40,48 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 57px;
   }
+
+  @media (min-width: $vp-1150) {
+    column-gap: 115px;
+  }
 }
 
 .advantages__item {
+  position: relative;
+
   padding-top: 51px;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: $color-black;
+
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &--flower {
+    background-image: url("../img/icons/flower.svg");
+  }
+
+  &--money {
+    background-image: url("../img/icons/money.svg");
+  }
+
+  &--heart {
+    background-image: url("../img/icons/heart.svg");
+  }
+
+  &--skein {
+    background-image: url("../img/icons/skein.svg");
+  }
+
+  &--rocket {
+    background-image: url("../img/icons/rocket.svg");
+  }
+
+  &--gift {
+    background-image: url("../img/icons/gift.svg");
+  }
 
   @media (min-width: $vp-768) {
     padding-top: 56px;

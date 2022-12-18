@@ -4,10 +4,17 @@
   @media (min-width: $vp-768) {
     padding-bottom: 68px;
   }
+
+  @media (min-width: $vp-1150) {
+    width: 1050px;
+    margin: 0 auto;
+    padding-bottom: 67px;
+  }
 }
 
 .reviews__wrapper {
   padding: 29px 30px 0 30px;
+
   @media (min-width: $vp-768) {
     display: grid;
     padding: 73px 50px 47px 50px;
@@ -17,6 +24,10 @@
     background-position: left center;
 
     grid-template-columns: auto 1fr auto;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 79px 0 96px 175px;
   }
 }
 
@@ -48,6 +59,11 @@
     grid-column: 1 / -1;
     grid-row: 2;
   }
+
+  @media (min-width: $vp-1150) {
+    margin-top: 35px;
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author {
@@ -64,6 +80,10 @@
 
     grid-column: 1;
     grid-row: 3;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 17px;
   }
 }
 
@@ -88,20 +108,54 @@
 }
 
 .reviews__control {
+  position: relative;
+
   width: 50%;
   height: 52px;
   padding: 0;
 
   border: 1px solid $color-whisper-1;
 
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 50px;
+    height: 26px;
+
+    background-image: url("../img/icons/huge-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $vp-768) {
     width: 75px;
 
     border: none;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   &--right {
     border-left: none;
+
+    &::before {
+      transform: scale(-1, 1);
+    }
   }
 
   &:disabled {
