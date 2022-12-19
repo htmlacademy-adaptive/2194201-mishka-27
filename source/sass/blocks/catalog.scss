@@ -48,7 +48,7 @@
     column-gap: 33px;
 
     grid-template-rows: min-content 1fr min-content;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
   }
 
   @media (min-width: $vp-1150) {
@@ -77,6 +77,14 @@
   width: 100%;
 
   vertical-align: middle;
+
+  @media (min-width: $vp-768) {
+    width: 334px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 316px;
+  }
 }
 
 .catalog__link-image {
