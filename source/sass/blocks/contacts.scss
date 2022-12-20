@@ -1,5 +1,5 @@
 .contacts {
-  padding: 38px 30px 39px 30px;
+  padding: 38px 0 39px 0;
 
   @media (min-width: $vp-768) {
     position: relative;
@@ -21,7 +21,7 @@
 .contacts__content {
   display: grid;
   margin-bottom: 62px;
-
+  padding: 0 30px;
   font-size: 14px;
   line-height: 30px;
   column-gap: 20px;
@@ -31,7 +31,7 @@
 
   @media (min-width: $vp-768) {
     margin-bottom: 49px;
-    padding: 0 50px 0 50px;
+    padding: 0 50px;
 
     font-size: 17px;
 
@@ -180,6 +180,10 @@
   height: 457px;
   margin-bottom: 42px;
 
+  .no-js & {
+    height: auto;
+  }
+
   @media (min-width: $vp-768) {
     margin-bottom: 55px;
   }
@@ -194,8 +198,25 @@
   }
 }
 
+.contacts__features {
+  display: none;
+
+  .no-js & {
+    display: block;
+  }
+}
+
+.contacts__image {
+  width: 100%;
+  display: block;
+}
+
 .contacts__iframe {
   width: 100%;
+
+  .no-js & {
+    display: none;
+  }
 
   @media (min-width: $vp-1150) {
     height: 100%;
@@ -203,6 +224,8 @@
 }
 
 .contacts__link {
+  margin: 0 30px;
+
   @media (min-width: $vp-768) {
     width: 230px;
     margin: 0 auto;
