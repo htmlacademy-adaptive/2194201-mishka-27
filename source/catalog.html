@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png">
-  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,9 +17,11 @@
   <header class="main-header">
     <div class="main-header__inner">
       <a class="main-header__logo" href="/" aria-label="Перейти на главную страницу.">
-        <img class="main-header__image main-header__image--logo-mobile" src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип магазина 'Мишка'.">
-        <img class="main-header__image main-header__image--logo-tablet" src="img/icons/logo-tablet.svg" width="114" height="46" alt="Логотип магазина 'Мишка'.">
-        <img class="main-header__image main-header__image--logo-desktop" src="img/icons/logo-desktop.svg" width="149" height="72" alt="Логотип магазина 'Мишка'.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+          <img class="main-header__image" src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип магазина 'Мишка'.">
+        </picture>
       </a>
       <button class="main-header__button" type="button" aria-label="Открыть главное меню.">
         <span class="main-header__button-line"></span>
@@ -72,7 +76,11 @@
       <ul class="catalog__list">
         <li class="catalog__item">
           <a class="catalog__link-image" href="#">
-            <img class="catalog__image" src="img/productions/bunny-hop.jpg" width="260" height="195" alt="Зайчик-попрыгайчик.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/productions/bunny-hop-desktop.jpg 1x, img/productions/bunny-hop-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/productions/bunny-hop-tablet.jpg 1x, img/productions/bunny-hop-tablet@2x.jpg 2x">
+              <img class="catalog__image" src="img/productions/bunny-hop-mobile.jpg" srcset="img/productions/bunny-hop-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик.">
+            </picture>
           </a>
           <a class="catalog__link-title" href="#">
             <h2 class="catalog__title title">Зайчик-попрыгайчик</h2>
@@ -87,7 +95,11 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__link-image" href="#">
-            <img class="catalog__image" src="img/productions/laundry-basket.jpg" width="260" height="195" alt="Корзинка для белья.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/productions/laundry-basket-desktop.jpg 1x, img/productions/laundry-basket-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/productions/laundry-basket-tablet.jpg 1x, img/productions/laundry-basket-tablet@2x.jpg 2x">
+              <img class="catalog__image" src="img/productions/laundry-basket-mobile.jpg" srcset="img/productions/laundry-basket-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья.">
+            </picture>
           </a>
           <a class="catalog__link-title" href="#">
             <h2 class="catalog__title title">Корзинка для белья</h2>
@@ -102,7 +114,11 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__link-image" href="#">
-            <img class="catalog__image" src="img/productions/large-basket-for-toys.jpg" width="260" height="195" alt="Большая корзинка для игрушек.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/productions/large-basket-for-toys-desktop.jpg 1x, img/productions/large-basket-for-toys-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/productions/large-basket-for-toys-tablet.jpg 1x, img/productions/large-basket-for-toys-tablet@2x.jpg 2x">
+              <img class="catalog__image" src="img/productions/large-basket-for-toys-mobile.jpg" srcset="img/productions/large-basket-for-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек.">
+            </picture>
           </a>
           <a class="catalog__link-title" href="#">
             <h2 class="catalog__title title">Большая корзинка для игрушек</h2>
@@ -124,7 +140,13 @@
           <button class="process__play-button button" type="button">
             <span class="visually-hidden">Запустить видео</span>
           </button>
-          <img class="process__image" src="img/production-process.jpg" width="260" height="150" alt="Процесс производства.">
+          <div class="process__features">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="process__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс производства.">
+            </picture>
+          </div>
         </div>
         <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <button class="process__button modal-link button button--primary" type="button">Сделать заказ</button>

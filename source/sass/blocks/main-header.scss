@@ -66,31 +66,14 @@
 .main-header__image {
   vertical-align: middle;
 
-  &--logo-tablet,
-  &--logo-desktop {
-    display: none;
-  }
-
   @media (min-width: $vp-768) {
-    &--logo-mobile,
-    &--logo-desktop {
-      display: none;
-    }
-
-    &--logo-tablet {
-      display: inline-block;
-    }
+    width: 114px;
+    height: 46px;
   }
 
   @media (min-width: $vp-1150) {
-    &--logo-mobile,
-    &--logo-tablet {
-      display: none;
-    }
-
-    &--logo-desktop {
-      display: inline-block;
-    }
+    width: 149px;
+    height: 72px;
   }
 }
 
@@ -108,6 +91,10 @@
   background-color: $color-white;
   border: none;
   cursor: pointer;
+
+  .no-js & {
+    display: none;
+  }
 
   &:disabled {
     opacity: 0.3;
@@ -232,6 +219,7 @@
 
     .main-header__item {
       margin-right: 26px;
+      margin-bottom: 2px;
 
       &:last-child {
         margin-right: 0;
@@ -267,6 +255,7 @@
 
     .main-header__item {
       margin-right: 0;
+      margin-bottom: 0;
 
       border-right: 1px solid rgba($color-black, 0.1);
 
@@ -336,6 +325,7 @@
 
     .main-header__item {
       margin-right: 35px;
+      margin-bottom: 2px;
 
       &:last-child {
         margin-right: 0;

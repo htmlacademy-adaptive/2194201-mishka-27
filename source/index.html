@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png">
-  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,9 +17,11 @@
   <header class="main-header main-header--home">
     <div class="main-header__inner">
       <a class="main-header__logo" href="#" aria-label="Перейти на главную страницу.">
-        <img class="main-header__image main-header__image--logo-mobile" src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип магазина 'Мишка'.">
-        <img class="main-header__image main-header__image--logo-tablet" src="img/icons/logo-tablet.svg" width="114" height="46" alt="Логотип магазина 'Мишка'.">
-        <img class="main-header__image main-header__image--logo-desktop" src="img/icons/logo-desktop.svg" width="149" height="72" alt="Логотип магазина 'Мишка'.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+          <img class="main-header__image" src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип магазина 'Мишка'.">
+        </picture>
       </a>
       <button class="main-header__button" type="button" aria-label="Открыть главное меню.">
         <span class="main-header__button-line"></span>
@@ -101,7 +105,13 @@
           <dd class="popular__description-item">15 см</dd>
         </div>
       </dl>
-      <img class="popular__image" width="260" height="315" src="img/productions/knitted-baskets.jpg" alt="Вязаные корзинки.">
+      <div class="popular__images">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/productions/triple-set-desktop.jpg 1x, img/productions/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/productions/triple-set-tablet.jpg 1x, img/productions/triple-set-tablet@2x.jpg 2x">
+          <img class="popular__image" width="260" height="315" src="img/productions/triple-set-mobile.jpg" srcset="img/productions/triple-set-mobile@2x.jpg 2x" alt="Товар недели.">
+        </picture>
+      </div>
       <b class="popular__price">990 руб.</b>
       <a class="popular__link modal-link button button--primary" href="#">Заказать</a>
     </section>

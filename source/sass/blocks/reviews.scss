@@ -19,11 +19,16 @@
     display: grid;
     padding: 73px 50px 47px 50px;
 
-    background-image: url("../../img/review-table.jpg");
+    background-image: url("../img/review.jpg");
     background-repeat: no-repeat;
     background-position: left center;
 
     grid-template-columns: auto 1fr auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   @media (min-width: $vp-1150) {
