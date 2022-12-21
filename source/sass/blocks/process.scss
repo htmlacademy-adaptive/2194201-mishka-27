@@ -110,6 +110,12 @@
   }
 }
 
+.process__features {
+  @media (min-width: $vp-1150) {
+    height: 100%;
+  }
+}
+
 .process__image {
   width: 100%;
 
@@ -117,6 +123,8 @@
 
   @media (min-width: $vp-1150) {
     height: 100%;
+
+    object-fit: cover;
   }
 }
 

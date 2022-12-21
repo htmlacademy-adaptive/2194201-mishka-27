@@ -493,6 +493,8 @@
   appearance: textfield;
 
   @media (min-width: $vp-768) {
+    align-self: flex-start;
+
     font-size: 19px;
   }
 

@@ -55,7 +55,7 @@
     padding-right: 0;
 
     grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-rows: 459px min-content 1fr min-content;
   }
 
   &:hover {
@@ -84,6 +84,9 @@
 
   @media (min-width: $vp-1150) {
     width: 316px;
+    height: 100%;
+
+    object-fit: cover;
   }
 }
 

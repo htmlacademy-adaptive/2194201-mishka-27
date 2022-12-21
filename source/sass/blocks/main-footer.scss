@@ -50,6 +50,7 @@
   border-bottom: 1px solid $color-whisper-2;
 
   @media (min-width: $vp-768) {
+    max-width: 300px;
     margin: 0;
     padding: 0;
 
