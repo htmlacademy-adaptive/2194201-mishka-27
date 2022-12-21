@@ -60,27 +60,27 @@
   background-position: left top;
 
   &--flower {
-    background-image: url("../img/icons/flower.svg");
+    background-image: url("../img/svg/flower.svg");
   }
 
   &--money {
-    background-image: url("../img/icons/money.svg");
+    background-image: url("../img/svg/money.svg");
   }
 
   &--heart {
-    background-image: url("../img/icons/heart.svg");
+    background-image: url("../img/svg/heart.svg");
   }
 
   &--skein {
-    background-image: url("../img/icons/skein.svg");
+    background-image: url("../img/svg/skein.svg");
   }
 
   &--rocket {
-    background-image: url("../img/icons/rocket.svg");
+    background-image: url("../img/svg/rocket.svg");
   }
 
   &--gift {
-    background-image: url("../img/icons/gift.svg");
+    background-image: url("../img/svg/gift.svg");
   }
 
   @media (min-width: $vp-768) {

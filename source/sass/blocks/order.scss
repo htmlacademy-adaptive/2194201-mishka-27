@@ -389,7 +389,7 @@
 
   &:checked {
     + .order__dot {
-      background-image: url("../img/icons/input-radio.svg");
+      background-image: url("../img/svg/input-radio.svg");
       background-repeat: no-repeat;
       background-position: center;
 
@@ -422,7 +422,7 @@
 
   &:checked {
     + .order__check {
-      background-image: url("../img/icons/input-checkbox.svg");
+      background-image: url("../img/svg/input-checkbox.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
