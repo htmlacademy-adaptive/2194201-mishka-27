@@ -77,16 +77,29 @@
 }
 
 .modal__radio-buttons {
-  display: grid;
-  margin-bottom: 31px;
-
-  gap: 7px;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 .modal__radio-button {
   display: flex;
+  flex-grow: 1;
+  flex-basis: 82px;
   align-items: center;
+  margin-bottom: 7px;
+
+  &:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (min-width: $vp-768) {
+    flex-basis: 111px;
+  }
 }
 
 .modal__radio-input {
