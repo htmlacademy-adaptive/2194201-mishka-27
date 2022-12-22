@@ -123,9 +123,17 @@
 
 .popular__parameters-wrapper {
   display: flex;
-  padding: 4px 0 15px 0;
+  padding: 10px 0 9px 0;
 
   border-bottom: 1px solid $color-whisper-1;
+
+  @media (min-width: $vp-768) {
+    padding: 8px 0 11px 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 4px 0 15px 0;
+  }
 }
 
 .popular__title-item {
