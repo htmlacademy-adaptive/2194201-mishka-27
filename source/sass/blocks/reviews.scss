@@ -22,12 +22,12 @@
     background-image: url("../img/review.jpg");
     background-repeat: no-repeat;
     background-position: left center;
+    background-size: auto 100%;
 
     grid-template-columns: auto 1fr auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/review@2x.jpg");
-      background-size: 350px auto;
     }
   }
 
@@ -42,6 +42,7 @@
   @media (min-width: $vp-768) {
     align-self: end;
     margin-bottom: 0;
+    padding-right: 30px;
 
     line-height: 46px;
 
@@ -205,6 +206,7 @@
 
 .reviews__link {
   @media (min-width: $vp-768) {
+    align-self: start;
     max-width: 220px;
     margin-top: 8px;
     padding-right: 38px;

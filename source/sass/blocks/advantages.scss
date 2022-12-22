@@ -57,7 +57,7 @@
   line-height: 20px;
   color: $color-black;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
 
@@ -65,7 +65,7 @@
   }
 
   &--flower {
-    &:before {
+    &::before {
       top: -2px;
       left: 8px;
 
@@ -81,7 +81,7 @@
   }
 
   &--money {
-    &:before {
+    &::before {
       top: -1px;
       left: 0;
 
@@ -98,7 +98,7 @@
   }
 
   &--heart {
-    &:before {
+    &::before {
       top: 4px;
       left: 7px;
 
@@ -115,7 +115,7 @@
   }
 
   &--skein {
-    &:before {
+    &::before {
       top: 1px;
       left: 3px;
 
@@ -132,7 +132,7 @@
   }
 
   &--rocket {
-    &:before {
+    &::before {
       top: 2px;
       left: -6px;
 
@@ -149,7 +149,7 @@
   }
 
   &--gift {
-    &:before {
+    &::before {
       top: 0;
       left: 3px;
 

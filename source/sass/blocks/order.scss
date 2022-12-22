@@ -97,17 +97,15 @@
       }
     }
 
-    .order__label {
-      &:not(:last-child) {
-        margin-bottom: 13px;
+    .order__label:not(:last-child) {
+      margin-bottom: 13px;
 
-        @media (min-width: $vp-768) {
-          margin-bottom: 27px;
-        }
+      @media (min-width: $vp-768) {
+        margin-bottom: 27px;
+      }
 
-        @media (min-width: $vp-1150) {
-          margin-bottom: 25px;
-        }
+      @media (min-width: $vp-1150) {
+        margin-bottom: 25px;
       }
     }
 
@@ -154,13 +152,11 @@
       }
     }
 
-    .order__label {
-      &:not(:last-child) {
-        margin-bottom: 23px;
+    .order__label:not(:last-child) {
+      margin-bottom: 23px;
 
-        @media (min-width: $vp-768) {
-          margin-bottom: 0;
-        }
+      @media (min-width: $vp-768) {
+        margin-bottom: 0;
       }
     }
   }

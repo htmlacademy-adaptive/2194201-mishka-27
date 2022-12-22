@@ -38,7 +38,7 @@
 .hero__wrapper {
   background-image: url("../img/hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: top -17px center;
+  background-position: bottom 133px center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -51,7 +51,7 @@
     padding: 109px 50px 0 50px;
 
     background-image: url("../img/hero-desktop.jpg");
-    background-position: top -47px center;
+    background-position: bottom 3px center;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -64,7 +64,7 @@
     margin: 0 auto;
     padding-top: 110px;
 
-    background-position: top -48px center;
+    background-position: bottom center;
   }
 }
 

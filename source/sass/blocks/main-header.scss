@@ -211,6 +211,10 @@
 }
 
 .main-header__site-list {
+  .main-header__link {
+    padding-left: 76px;
+  }
+
   @media (min-width: $vp-768) {
     display: flex;
     flex-wrap: wrap;
@@ -227,6 +231,8 @@
     }
 
     .main-header__link {
+      padding-left: 5px;
+
       font-size: 15px;
     }
   }
@@ -350,7 +356,7 @@
 .main-header__link {
   display: flex;
   align-items: center;
-  padding: 27px 30px;
+  padding: 28px 30px 27px 30px;
 
   font-weight: 700;
   font-size: 17px;
@@ -395,7 +401,7 @@
 }
 
 .main-header__text {
-  margin-left: 25px;
+  margin-left: 27px;
 
   @media (min-width: $vp-768) {
     margin-left: 32px;
