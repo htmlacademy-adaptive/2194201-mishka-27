@@ -80,13 +80,13 @@
 
   @media (min-width: $vp-768) {
     width: 334px;
+    height: 100%;
+
+    object-fit: cover;
   }
 
   @media (min-width: $vp-1150) {
     width: 316px;
-    height: 100%;
-
-    object-fit: cover;
   }
 }
 
@@ -118,9 +118,10 @@
   }
 
   @media (min-width: $vp-1150) {
+    padding-top: 30px;
     padding-right: 50px;
     padding-left: 27px;
-    padding-top: 30px;
+
     grid-row: 2;
     grid-column: 1;
   }
