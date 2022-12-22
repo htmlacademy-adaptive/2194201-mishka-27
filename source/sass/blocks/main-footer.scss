@@ -94,4 +94,8 @@
   margin-left: 27px;
 
   fill: $color-downy-1;
+
+  @media (min-width: $vp-1150) {
+    margin-left: 29px;
+  }
 }

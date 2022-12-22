@@ -20,4 +20,10 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: $vp-1150) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-bottom: 113px;
+  }
 }

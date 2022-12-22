@@ -36,7 +36,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    top: 2px;
+    top: 3px;
     left: 50%;
 
     padding: 0;
@@ -267,7 +267,7 @@
     }
 
     .main-header__link {
-      padding: 36px 31px 35px 31px;
+      padding: 36px 33px 35px 33px;
 
       font-size: 17px;
     }
@@ -322,11 +322,11 @@
   @media (min-width: $vp-1150) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: 17px;
+    margin-left: 46px;
 
     .main-header__item {
-      margin-right: 35px;
+      margin-right: 51px;
       margin-bottom: 2px;
 
       &:last-child {
@@ -369,6 +369,10 @@
       padding: 35px 31px;
 
       border-left: 1px solid rgba($color-black, 0.1);
+    }
+
+    @media (min-width: $vp-1150) {
+      padding: 35px 32px;
     }
   }
 
@@ -419,7 +423,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    margin-top: 22px;
+    margin-top: 20px;
 
     grid-column: 2;
   }

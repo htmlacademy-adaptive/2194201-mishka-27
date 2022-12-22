@@ -118,9 +118,9 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding-right: 34px;
+    padding-right: 50px;
     padding-left: 27px;
-
+    padding-top: 30px;
     grid-row: 2;
     grid-column: 1;
   }
@@ -169,7 +169,7 @@
   @media (min-width: $vp-1150) {
     margin-right: 34px;
     margin-left: 27px;
-    padding-bottom: 12px;
+    padding-bottom: 16px;
 
     grid-row: 3;
     grid-column: 1;
@@ -197,7 +197,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding-left: 27px;
+    padding-left: 26px;
 
     grid-row: 4;
     grid-column: 1;
@@ -221,7 +221,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding-right: 34px;
+    padding-right: 32px;
 
     grid-row: 4;
     grid-column: 1;
