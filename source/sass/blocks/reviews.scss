@@ -63,7 +63,7 @@
   line-height: 30px;
   white-space: pre-line;
 
-  @media (min-width: 321px) {
+  @media (min-width: $vp-321) {
     white-space: normal;
   }
 
