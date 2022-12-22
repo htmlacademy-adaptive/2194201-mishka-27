@@ -12,12 +12,15 @@ const openMainMenu = () => {
 const openModal = (event) => {
   event.preventDefault();
   modalContainer.classList.add("is-open");
+  html.style.overflowY = "hidden";
 
   modalOverlay.addEventListener("click", closeModal);
 };
 
 const closeModal = () => {
   modalContainer.classList.remove("is-open");
+  html.style.overflowY = null;
+
   modalOverlay.removeEventListener("click", closeModal);
 };
 
