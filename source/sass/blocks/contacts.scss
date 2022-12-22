@@ -4,7 +4,7 @@
   @media (min-width: $vp-768) {
     position: relative;
 
-    padding: 70px 0 57px 0;
+    padding: 69px 0 57px 0;
   }
 
   @media (min-width: $vp-1150) {
@@ -22,12 +22,13 @@
   display: grid;
   margin-bottom: 62px;
   padding: 0 30px;
+
   font-size: 14px;
   line-height: 30px;
   column-gap: 20px;
 
-  grid-template-columns: minmax(auto, 150px) 1fr;
-  row-gap: 20px;
+  grid-template-columns: 57px 1fr;
+  row-gap: 29px;
 
   @media (min-width: $vp-768) {
     margin-bottom: 49px;
@@ -36,7 +37,7 @@
     font-size: 17px;
 
     row-gap: 0;
-    grid-template-columns: auto 1fr auto 1fr;
+    grid-template-columns: auto 0.9fr auto 1fr;
   }
 
   @media (min-width: $vp-1150) {
@@ -51,9 +52,11 @@
 }
 
 .contacts__title {
-  margin-bottom: 28px;
-
   grid-column: 1 / -1;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 49px;
+  }
 
   @media (min-width: $vp-1150) {
     padding-top: 79px;
@@ -67,8 +70,8 @@
 
   @media (min-width: $vp-768) {
     position: absolute;
-    top: 30px;
-    right: 50px;
+    top: 46px;
+    right: 53px;
 
     display: block;
     width: 47px;
@@ -133,6 +136,7 @@
 
   @media (min-width: $vp-768) {
     align-self: start;
+    padding-left: 4px;
 
     grid-column: 2;
   }
@@ -144,13 +148,17 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
 
     width: 100%;
     height: 1px;
 
     background-color: $color-downy-2;
+
+    @media (min-width: $vp-768) {
+      bottom: 0;
+    }
   }
 
   &:hover {
@@ -168,6 +176,8 @@
   font-style: normal;
 
   @media (min-width: $vp-768) {
+    padding-left: 7px;
+
     grid-column: 4;
   }
 
@@ -178,14 +188,14 @@
 
 .contacts__map {
   height: 457px;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
 
   .no-js & {
     height: auto;
   }
 
   @media (min-width: $vp-768) {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $vp-1150) {
@@ -207,12 +217,13 @@
 }
 
 .contacts__image {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .contacts__iframe {
   width: 100%;
+
   border: 0;
 
   .no-js & {

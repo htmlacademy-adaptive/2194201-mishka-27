@@ -51,7 +51,7 @@
     padding: 109px 50px 0 50px;
 
     background-image: url("../img/hero-desktop.jpg");
-    background-position: top -55px center;
+    background-position: top -47px center;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -62,7 +62,9 @@
   @media (min-width: $vp-1150) {
     width: 1150px;
     margin: 0 auto;
-    padding-top: 114px;
+    padding-top: 110px;
+
+    background-position: top -48px center;
   }
 }
 
@@ -74,7 +76,7 @@
 
   @media (min-width: $vp-768) {
     padding: 0;
-    padding-bottom: 372px;
+    padding-bottom: 371px;
 
     font-size: 43px;
     line-height: 50px;
@@ -187,7 +189,7 @@
 
   &--interior {
     &::after {
-      right: 42px;
+      right: 36px;
 
       width: 40px;
       height: 62px;
@@ -198,12 +200,20 @@
 
   &--toys {
     &::after {
-      right: 33px;
+      right: 27px;
 
       width: 60px;
       height: 60px;
 
       background-image: url("../img/svg/toys.svg");
+
+      @media (min-width: $vp-768) {
+        right: 33px;
+      }
+
+      @media (min-width: $vp-1150) {
+        right: 35px;
+      }
     }
   }
 
@@ -235,9 +245,13 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 25px 120px 34px 36px;
+    padding: 26px 120px 36px 36px;
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding-bottom: 33px;
   }
 }

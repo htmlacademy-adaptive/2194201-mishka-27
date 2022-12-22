@@ -2,21 +2,22 @@
   padding: 31px 30px 29px 30px;
 
   @media (min-width: $vp-768) {
-    width: 751px;
+    width: 768px;
     margin: 0 auto;
-    padding: 55px 50px 83px 50px;
+    padding: 56px 50px 81px 50px;
   }
 
   @media (min-width: $vp-1150) {
-    padding: 68px 0 90px 0;
+    width: 700px;
+    padding: 68px 0 88px 0;
   }
 }
 
 .advantages__title {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $vp-1150) {
@@ -35,56 +36,138 @@
   row-gap: 30px;
 
   @media (min-width: $vp-768) {
-    column-gap: 107px;
+    column-gap: 1px;
 
     grid-template-columns: 1fr 1fr;
-    row-gap: 57px;
+    row-gap: 55px;
   }
 
   @media (min-width: $vp-1150) {
-    column-gap: 115px;
+    column-gap: 0;
   }
 }
 
 .advantages__item {
   position: relative;
 
-  padding-top: 51px;
+  padding-top: 53px;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: $color-black;
 
-  background-repeat: no-repeat;
-  background-position: left top;
+  &:before {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+  }
 
   &--flower {
-    background-image: url("../img/svg/flower.svg");
+    &:before {
+      top: -2px;
+      left: 8px;
+
+      width: 33px;
+      height: 38px;
+
+      background-image: url("../img/svg/flower.svg");
+
+      @media (min-width: $vp-768) {
+        top: -1px;
+      }
+    }
   }
 
   &--money {
-    background-image: url("../img/svg/money.svg");
+    &:before {
+      top: -1px;
+      left: 0;
+
+      width: 47px;
+      height: 27px;
+
+      background-image: url("../img/svg/money.svg");
+
+      @media (min-width: $vp-768) {
+        top: 1px;
+        left: 1px;
+      }
+    }
   }
 
   &--heart {
-    background-image: url("../img/svg/heart.svg");
+    &:before {
+      top: 4px;
+      left: 7px;
+
+      width: 34px;
+      height: 27px;
+
+      background-image: url("../img/svg/heart.svg");
+
+      @media (min-width: $vp-768) {
+        top: 6px;
+        left: 8px;
+      }
+    }
   }
 
   &--skein {
-    background-image: url("../img/svg/skein.svg");
+    &:before {
+      top: 1px;
+      left: 3px;
+
+      width: 35px;
+      height: 34px;
+
+      background-image: url("../img/svg/skein.svg");
+
+      @media (min-width: $vp-768) {
+        top: 3px;
+        left: 2px;
+      }
+    }
   }
 
   &--rocket {
-    background-image: url("../img/svg/rocket.svg");
+    &:before {
+      top: 2px;
+      left: -6px;
+
+      width: 55px;
+      height: 23px;
+
+      background-image: url("../img/svg/rocket.svg");
+
+      @media (min-width: $vp-768) {
+        top: 4px;
+        left: -7px;
+      }
+    }
   }
 
   &--gift {
-    background-image: url("../img/svg/gift.svg");
+    &:before {
+      top: 0;
+      left: 3px;
+
+      width: 33px;
+      height: 32px;
+
+      background-image: url("../img/svg/gift.svg");
+
+      @media (min-width: $vp-768) {
+        top: 2px;
+        left: 2px;
+      }
+    }
   }
 
   @media (min-width: $vp-768) {
     padding-top: 56px;
+    padding-right: 30px;
 
     font-size: 20px;
     line-height: 22px;
