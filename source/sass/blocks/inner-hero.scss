@@ -1,10 +1,41 @@
 .inner-hero {
+  position: relative;
+
   padding: 0 30px;
 
   background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
     padding: 0 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      z-index: 1;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/svg/zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: bottom center;
+      background-size: 770px 24px;
+      transform: translateX(-50%);
+
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: $vp-1150) {
+    &::after {
+      bottom: -17px;
+
+      height: 34px;
+
+      background-size: 1150px 34px;
+    }
   }
 }
 
@@ -15,9 +46,16 @@
   text-align: center;
 
   @media (min-width: $vp-768) {
-    padding: 66px 0 75px 0;
+    padding: 54px 0 78px 0;
 
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding-bottom: 95px;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }

@@ -2,13 +2,13 @@
   padding: 30px 30px 15px 30px;
 
   @media (min-width: $vp-768) {
-    padding: 67px 50px 53px 50px;
+    padding: 76px 50px 53px 50px;
   }
 
   @media (min-width: $vp-1150) {
     width: 1150px;
     margin: 0 auto;
-    padding-top: 111px;
+    padding-top: 129px;
     padding-bottom: 57px;
   }
 }
@@ -24,7 +24,7 @@
   row-gap: 30px;
 
   @media (min-width: $vp-768) {
-    row-gap: 55px;
+    row-gap: 52px;
   }
 
   @media (min-width: $vp-1150) {
@@ -35,7 +35,7 @@
 
 .catalog__item {
   display: grid;
-  padding-bottom: 15px;
+  padding-bottom: 26px;
 
   border: 1px solid $color-whisper-1;
 
@@ -45,7 +45,7 @@
     padding: 0;
     padding-right: 33px;
 
-    column-gap: 33px;
+    column-gap: 32px;
 
     grid-template-rows: min-content 1fr min-content;
     grid-template-columns: auto 1fr;
@@ -55,7 +55,7 @@
     padding-right: 0;
 
     grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-rows: 459px min-content 1fr min-content;
   }
 
   &:hover {
@@ -80,6 +80,9 @@
 
   @media (min-width: $vp-768) {
     width: 334px;
+    height: 100%;
+
+    object-fit: cover;
   }
 
   @media (min-width: $vp-1150) {
@@ -88,7 +91,7 @@
 }
 
 .catalog__link-image {
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 
   @media (min-width: $vp-768) {
     margin-bottom: 0;
@@ -103,18 +106,20 @@
 }
 
 .catalog__link-title {
-  margin-bottom: 6px;
-  padding: 0 30px;
+  margin-bottom: 8px;
+  padding: 0 27px;
 
   @media (min-width: $vp-768) {
     padding: 0;
     padding-top: 27px;
+    padding-right: 25px;
 
     grid-column: auto / -1;
   }
 
   @media (min-width: $vp-1150) {
-    padding-right: 34px;
+    padding-top: 30px;
+    padding-right: 50px;
     padding-left: 27px;
 
     grid-row: 2;
@@ -146,8 +151,8 @@
 .catalog__description {
   position: relative;
 
-  margin: 0 30px 20px 30px;
-  padding-bottom: 17px;
+  margin: 0 27px 17px 27px;
+  padding-bottom: 21px;
 
   font-size: 13px;
 
@@ -165,7 +170,7 @@
   @media (min-width: $vp-1150) {
     margin-right: 34px;
     margin-left: 27px;
-    padding-bottom: 12px;
+    padding-bottom: 16px;
 
     grid-row: 3;
     grid-column: 1;
@@ -173,13 +178,15 @@
 }
 
 .catalog__price {
-  padding-left: 30px;
+  margin-top: 5px;
+  padding-left: 26px;
 
   color: $color-black;
 
   grid-column: 1;
 
   @media (min-width: $vp-768) {
+    margin-top: 0;
     margin-bottom: 25px;
     padding: 0;
     padding-right: 50px;
@@ -191,7 +198,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding-left: 27px;
+    padding-left: 26px;
 
     grid-row: 4;
     grid-column: 1;
@@ -199,7 +206,7 @@
 }
 
 .catalog__link-basket {
-  margin-right: 25px;
+  margin-right: 21px;
   padding: 5px;
 
   grid-column-end: -1;
@@ -215,7 +222,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding-right: 34px;
+    padding-right: 32px;
 
     grid-row: 4;
     grid-column: 1;

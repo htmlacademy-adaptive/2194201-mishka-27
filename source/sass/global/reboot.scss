@@ -17,6 +17,8 @@ html {
   line-height: $lh-default;
   font-family: $ff-open-sans;
   color: $color-charcoal;
+
+  scrollbar-gutter: stable;
 }
 
 body {
