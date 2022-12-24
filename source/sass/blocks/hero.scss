@@ -14,11 +14,13 @@
       width: 100%;
       height: 24px;
 
-      background-image: url("../img/zigzag-fill.svg");
+      background-image: url("../img/svg/zigzag-fill.svg");
       background-repeat: repeat-x;
       background-position: bottom center;
       background-size: 770px 24px;
       transform: translateX(-50%);
+
+      pointer-events: none;
     }
   }
 
@@ -28,31 +30,41 @@
 
       height: 34px;
 
-      background-size: 1250px 34px;
+      background-size: 1150px 34px;
     }
   }
 }
 
 .hero__wrapper {
-  background-image: url("../img/hero-mobile@2x.jpg");
+  background-image: url("../img/hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: top -17px center;
-  background-size: 320px auto;
+  background-position: bottom 133px center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 
   @media (min-width: $vp-768) {
     position: relative;
 
-    padding: 155px 50px 0 50px;
+    padding: 109px 50px 0 50px;
 
     background-image: url("../img/hero-desktop.jpg");
-    background-position: top -55px center;
-    background-size: 768px auto;
+    background-position: bottom 3px center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   @media (min-width: $vp-1150) {
     width: 1150px;
     margin: 0 auto;
-    padding-top: 158px;
+    padding-top: 110px;
+
+    background-position: bottom center;
   }
 }
 
@@ -64,7 +76,7 @@
 
   @media (min-width: $vp-768) {
     padding: 0;
-    padding-bottom: 372px;
+    padding-bottom: 371px;
 
     font-size: 43px;
     line-height: 50px;
@@ -99,12 +111,14 @@
   flex-grow: 1;
 
   &:nth-child(even) {
+    .hero__link,
     .hero__text {
       background-color: $color-puerto-rico-1;
     }
   }
 
   &:hover:nth-child(even) {
+    .hero__link,
     .hero__text {
       background-color: $color-puerto-rico-2;
     }
@@ -114,12 +128,14 @@
     width: 50%;
 
     &:nth-child(even) {
+      .hero__link,
       .hero__text {
         background-color: $color-downy-1;
       }
     }
 
     &:hover:nth-child(even) {
+      .hero__link,
       .hero__text {
         background-color: $color-downy-3;
       }
@@ -127,6 +143,7 @@
 
     &:nth-child(4n + 2),
     &:nth-child(4n - 1) {
+      .hero__link,
       .hero__text {
         background-color: $color-puerto-rico-1;
       }
@@ -134,6 +151,7 @@
 
     &:hover:nth-child(4n + 2),
     &:hover:nth-child(4n - 1) {
+      .hero__link,
       .hero__text {
         background-color: $color-puerto-rico-2;
       }
@@ -146,17 +164,14 @@
 
   display: block;
   width: 100%;
-  min-height: 103px;
 
   font-weight: 700;
   font-size: 19px;
   color: $color-white;
 
-  transition: 0.2s;
+  background-color: $color-downy-1;
 
-  @media (min-width: $vp-768) {
-    min-height: 119px;
-  }
+  transition: 0.2s;
 
   &:focus {
     z-index: 1;
@@ -164,45 +179,40 @@
 }
 
 .hero__text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
+  display: block;
   width: 100%;
   padding: 24px 100px 31px 30px;
 
   background-color: $color-downy-1;
 
-  transition: padding 0.2s;
+  transition: transform 0.2s;
 
   &--interior {
     &::after {
-      top: 18px;
-      right: 42px;
+      right: 36px;
 
       width: 40px;
       height: 62px;
 
-      background-image: url("../img/icons/interior.svg");
-
-      @media (min-width: $vp-768) {
-        top: 28px;
-      }
+      background-image: url("../img/svg/interior.svg");
     }
   }
 
   &--toys {
     &::after {
-      top: 28px;
-      right: 33px;
+      right: 27px;
 
       width: 60px;
       height: 60px;
 
-      background-image: url("../img/icons/toys.svg");
+      background-image: url("../img/svg/toys.svg");
 
       @media (min-width: $vp-768) {
-        top: 30px;
+        right: 33px;
+      }
+
+      @media (min-width: $vp-1150) {
+        right: 35px;
       }
     }
   }
@@ -210,17 +220,18 @@
   &::after {
     content: "";
     position: absolute;
+    top: 50%;
 
     background-repeat: no-repeat;
+    transform: translateY(-50%);
     opacity: 0.5;
 
     transition: opacity 0.2s;
   }
 
   &:hover {
-    padding-bottom: 39px;
-
     background-color: $color-downy-3;
+    transform: translateY(-5px);
 
     &::after {
       opacity: 0.7;
@@ -234,9 +245,13 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 25px 120px 34px 36px;
+    padding: 26px 120px 36px 36px;
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding-bottom: 33px;
   }
 }

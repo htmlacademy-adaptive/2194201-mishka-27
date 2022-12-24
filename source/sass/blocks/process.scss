@@ -14,8 +14,8 @@
 
 .process__content {
   display: grid;
-  padding-top: 21px;
-  padding-bottom: 33px;
+  padding-top: 23px;
+  padding-bottom: 32px;
 
   border: 1px solid $color-whisper-1;
 
@@ -47,7 +47,7 @@
   margin-bottom: 26px;
   margin-left: 34px;
   padding-right: 34px;
-  padding-left: 57px;
+  padding-left: 56px;
 
   font-size: 17px;
   line-height: 24px;
@@ -61,14 +61,20 @@
     width: 32px;
     height: 22px;
 
-    background-image: url("../img/icons/camera.svg");
+    background-image: url("../img/svg/camera.svg");
     background-repeat: no-repeat;
     transform: translateY(-50%);
+
+    @media (min-width: $vp-768) {
+      top: 36%;
+    }
   }
 
   @media (min-width: $vp-768) {
+    margin-bottom: 24px;
     margin-left: 40px;
     padding-right: 40px;
+    padding-left: 66px;
 
     font-size: 20px;
 
@@ -77,15 +83,16 @@
 
   @media (min-width: $vp-1150) {
     margin-top: 47px;
-    padding-top: 43px;
-    padding-right: 90px;
+    padding-top: 48px;
+    padding-right: 50px;
     padding-left: 0;
-
+    margin-bottom: 20px;
+    margin-left: 80px;
     grid-column: 2;
     grid-row: 1;
 
     &::before {
-      top: 0;
+      top: -2px;
 
       transform: translateY(0);
     }
@@ -96,9 +103,11 @@
   position: relative;
 
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 40px;
+
     grid-row: 1;
   }
 
@@ -107,6 +116,12 @@
 
     grid-row: 1 / 4;
     grid-column: 1;
+  }
+}
+
+.process__features {
+  @media (min-width: $vp-1150) {
+    height: 100%;
   }
 }
 
@@ -131,7 +146,7 @@
   height: 77px;
   padding: 0;
 
-  background-image: url("../img/icons/play.svg");
+  background-image: url("../img/svg/play.svg");
   background-repeat: no-repeat;
   background-position: center;
   transform: translate(-50%, -50%);
@@ -151,7 +166,7 @@
 .process__description {
   margin: 0;
   margin-bottom: 41px;
-  padding: 0 34px;
+  padding: 0 32px;
 
   font-size: 13px;
 
@@ -166,6 +181,8 @@
   @media (min-width: $vp-1150) {
     grid-column: 2;
     grid-row: 2;
+    padding-left: 80px;
+    margin-bottom: 43px;
   }
 }
 
@@ -173,12 +190,12 @@
   margin: 0 33px;
 
   @media (min-width: $vp-768) {
-    margin: 0 42px;
+    margin: 0 41px;
   }
 
   @media (min-width: $vp-1150) {
     align-self: start;
-    margin-bottom: 60px;
+    margin: 0 56px 53px 82px;
 
     grid-column: 2;
     grid-row: 3;

@@ -5,13 +5,13 @@
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 25px 30px 23px 30px;
+  padding: 20px 30px 23px 30px;
 
   @media (min-width: $vp-768) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 51px 50px 58px 50px;
+    padding: 45px 45px 58px 50px;
   }
 
   @media (min-width: $vp-1150) {
@@ -24,7 +24,7 @@
   display: none;
 
   @media (min-width: $vp-768) {
-    display: block;
+    display: flex;
 
     &:hover {
       .main-footer__svg {
@@ -44,21 +44,23 @@
   position: relative;
 
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-bottom: 20px;
 
   border-bottom: 1px solid $color-whisper-2;
 
   @media (min-width: $vp-768) {
+    max-width: 300px;
     margin: 0;
     padding: 0;
+    padding-left: 5px;
 
     border: none;
   }
 }
 
 .main-footer__social-item {
-  margin: 0 5px;
+  margin: 0 8px;
 }
 
 .main-footer__link {
@@ -92,4 +94,8 @@
   margin-left: 27px;
 
   fill: $color-downy-1;
+
+  @media (min-width: $vp-1150) {
+    margin-left: 29px;
+  }
 }
