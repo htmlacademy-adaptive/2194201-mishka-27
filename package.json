@@ -10,6 +10,8 @@
     "gulp-dart-sass": "^1.0.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
+    "gulp-rename": "^2.0.0",
+    "postcss-csso": "^6.0.1",
     "postcss-scss": "^4.0.6",
     "stylelint": "^14.16.0",
     "stylelint-config-htmlacademy": "^1.1.3"
