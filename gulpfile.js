@@ -44,7 +44,8 @@ const script = () => {
     .src("source/js/*.js")
     .pipe(concat("script.js"))
     .pipe(terser())
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("build/js"))
+    .pipe(browser.stream());
 };
 
 // Images
@@ -136,7 +137,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html, reload));
-  gulp.watch("source/js/*.js", gulp.series(script, reload));
+  gulp.watch("source/js/*.js", gulp.series(script));
   gulp.watch(
     "source/img/**/*.{jpg,png}",
     gulp.series(copyImages, createWebp, reload)
@@ -145,16 +146,21 @@ const watcher = () => {
   gulp.watch("source/img/svg/sprite/*.svg", gulp.series(sprite, reload));
 };
 
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(styles, html, script, svg, sprite, createWebp)
+);
+
+// Default
+
 export default gulp.series(
   clean,
-  html,
-  styles,
-  script,
-  copyImages,
-  createWebp,
-  svg,
-  sprite,
   copy,
-  server,
-  watcher
+  copyImages,
+  gulp.parallel(styles, html, script, svg, sprite, createWebp),
+  gulp.series(server, watcher)
 );
