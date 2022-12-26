@@ -9,6 +9,8 @@ import htmlmin from "gulp-htmlmin";
 import concat from "gulp-concat";
 import terser from "gulp-terser";
 import squoosh from "gulp-libsquoosh";
+import svgo from "gulp-svgmin";
+import svgstore from "gulp-svgstore";
 import browser from "browser-sync";
 
 // Styles
@@ -59,15 +61,35 @@ const copyImages = () => {
 };
 
 // Webp
-export const createWebp = () => {
+
+const createWebp = () => {
   return gulp
-    .src("source/img/**/*.{jpg,png}", "!source/img/favicons/*.png")
+    .src(["source/img/**/*.{jpg,png}", "!source/img/favicons/*.png"])
     .pipe(
       squoosh({
         webp: {},
       })
     )
     .pipe(gulp.dest("build/img"));
+};
+
+// SVG
+
+const svg = () => {
+  return gulp
+    .src(["source/img/svg/*.svg", "!source/img/sprite/*.svg"])
+    .pipe(svgo())
+    .pipe(gulp.dest("build/img/svg"));
+};
+
+const sprite = () => {
+  return gulp
+    .src("source/img/svg/sprite/*.svg")
+    .pipe(svgo())
+    .pipe(rename({ prefix: "icon-" }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/svg"));
 };
 
 // Server
@@ -93,8 +115,24 @@ const watcher = () => {
     .watch("source/js/*.js", gulp.series(script))
     .on("change", browser.reload);
   gulp
-    .watch("source/img/**/*.{jpg,png}", gulp.series(copyImages))
+    .watch("source/img/**/*.{jpg,png}", gulp.series(copyImages, createWebp))
+    .on("change", browser.reload);
+  gulp
+    .watch("source/img/svg/*.svg", gulp.series(svg))
+    .on("change", browser.reload);
+  gulp
+    .watch("source/img/svg/sprite/*.svg", gulp.series(sprite))
     .on("change", browser.reload);
 };
 
-export default gulp.series(html, styles, script, copyImages, server, watcher);
+export default gulp.series(
+  html,
+  styles,
+  script,
+  copyImages,
+  createWebp,
+  svg,
+  sprite,
+  server,
+  watcher
+);
