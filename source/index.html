@@ -6,10 +6,10 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -161,8 +161,11 @@
       <div class="contacts__map">
         <a class="contacts__features" href="https://yandex.ru/maps/-/CCUR4YDYkA" target="_blank" rel="nofollow">
           <picture>
+            <source media="(min-width: 1150px)" type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
             <img class="contacts__image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg" width="320" height="454" alt="Карта местоположения">
           </picture>
         </a>

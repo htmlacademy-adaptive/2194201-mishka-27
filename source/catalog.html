@@ -6,10 +6,10 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -77,8 +77,11 @@
         <li class="catalog__item">
           <a class="catalog__link-image" href="#">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/productions/bunny-hop-desktop.webp 1x, img/productions/bunny-hop-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/productions/bunny-hop-desktop.jpg 1x, img/productions/bunny-hop-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/productions/bunny-hop-tablet.webp 1x, img/productions/bunny-hop-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/productions/bunny-hop-tablet.jpg 1x, img/productions/bunny-hop-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/productions/bunny-hop-mobile.webp 1x, img/productions/bunny-hop-mobile@2x.webp 2x">
               <img class="catalog__image" src="img/productions/bunny-hop-mobile.jpg" srcset="img/productions/bunny-hop-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик.">
             </picture>
           </a>
@@ -96,8 +99,11 @@
         <li class="catalog__item">
           <a class="catalog__link-image" href="#">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/productions/laundry-basket-desktop.webp 1x, img/productions/laundry-basket-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/productions/laundry-basket-desktop.jpg 1x, img/productions/laundry-basket-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/productions/laundry-basket-tablet.webp 1x, img/productions/laundry-basket-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/productions/laundry-basket-tablet.jpg 1x, img/productions/laundry-basket-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/productions/laundry-basket-mobile.webp 1x, img/productions/laundry-basket-mobile@2x.webp 2x">
               <img class="catalog__image" src="img/productions/laundry-basket-mobile.jpg" srcset="img/productions/laundry-basket-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья.">
             </picture>
           </a>
@@ -115,8 +121,11 @@
         <li class="catalog__item">
           <a class="catalog__link-image" href="#">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/productions/large-basket-for-toys-desktop.webp 1x, img/productions/large-basket-for-toys-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/productions/large-basket-for-toys-desktop.jpg 1x, img/productions/large-basket-for-toys-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/productions/large-basket-for-toys-tablet.webp 1x, img/productions/large-basket-for-toys-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/productions/large-basket-for-toys-tablet.jpg 1x, img/productions/large-basket-for-toys-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/productions/large-basket-for-toys-mobile.webp 1x, img/productions/large-basket-for-toys-mobile@2x.webp 2x">
               <img class="catalog__image" src="img/productions/large-basket-for-toys-mobile.jpg" srcset="img/productions/large-basket-for-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек.">
             </picture>
           </a>
@@ -142,8 +151,11 @@
           </button>
           <div class="process__features">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
               <img class="process__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс производства.">
             </picture>
           </div>
