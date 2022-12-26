@@ -8,6 +8,7 @@ import rename from "gulp-rename";
 import htmlmin from "gulp-htmlmin";
 import concat from "gulp-concat";
 import terser from "gulp-terser";
+import squoosh from "gulp-libsquoosh";
 import browser from "browser-sync";
 
 // Styles
@@ -44,6 +45,21 @@ const script = () => {
     .pipe(gulp.dest("build/js"));
 };
 
+// Images
+
+const optimizeImages = () => {
+  return gulp
+    .src("source/img/**/*.{jpg,png}")
+    .pipe(squoosh())
+    .pipe(gulp.dest("build/img"));
+};
+
+const copyImages = () => {
+  return gulp.src("source/img/**/*.{jpg,png}").pipe(gulp.dest("build/img"));
+};
+
+// Webp
+
 // Server
 
 const server = (done) => {
@@ -66,6 +82,9 @@ const watcher = () => {
   gulp
     .watch("source/js/*.js", gulp.series(script))
     .on("change", browser.reload);
+  gulp
+    .watch("source/img/**/*.{jpg,png}", gulp.series(copyImages))
+    .on("change", browser.reload);
 };
 
-export default gulp.series(html, styles, script, server, watcher);
+export default gulp.series(html, styles, script, copyImages, server, watcher);
