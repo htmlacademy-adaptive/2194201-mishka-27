@@ -19,7 +19,7 @@
     display: grid;
     padding: 71px 50px 49px 50px;
 
-    background-image: url("../img/review.jpg");
+    background-image: url("../img/backgrounds/review.jpg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: auto 100%;
@@ -27,7 +27,7 @@
     grid-template-columns: auto 1fr auto;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/review@2x.jpg");
+      background-image: url("../img/backgrounds/review@2x.jpg");
     }
   }
 
