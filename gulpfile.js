@@ -34,8 +34,7 @@ const html = () => {
     .src("source/*.html")
     .pipe(plumber())
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"))
-    .pipe(browser.stream());
+    .pipe(gulp.dest("build"));
 };
 
 // Script
@@ -136,22 +135,18 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/*.html", gulp.series(html)).on("change", browser.reload);
-  gulp
-    .watch("source/js/*.js", gulp.series(script))
-    .on("change", browser.reload);
-  gulp
-    .watch("source/img/**/*.{jpg,png}", gulp.series(copyImages, createWebp))
-    .on("change", browser.reload);
-  gulp
-    .watch("source/img/svg/*.svg", gulp.series(svg))
-    .on("change", browser.reload);
-  gulp
-    .watch("source/img/svg/sprite/*.svg", gulp.series(sprite))
-    .on("change", browser.reload);
+  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/*.js", gulp.series(script, reload));
+  gulp.watch(
+    "source/img/**/*.{jpg,png}",
+    gulp.series(copyImages, createWebp, reload)
+  );
+  gulp.watch("source/img/svg/*.svg", gulp.series(svg, reload));
+  gulp.watch("source/img/svg/sprite/*.svg", gulp.series(sprite, reload));
 };
 
 export default gulp.series(
+  clean,
   html,
   styles,
   script,
