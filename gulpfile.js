@@ -92,6 +92,18 @@ const sprite = () => {
     .pipe(gulp.dest("build/img/svg"));
 };
 
+// Copy
+
+const copy = (done) => {
+  gulp
+    .src(
+      ["source/fonts/*.{woff2,woff}", "source/*.ico", "source/*.webmanifest"],
+      { base: "source" }
+    )
+    .pipe(gulp.dest("build"));
+  done();
+};
+
 // Server
 
 const server = (done) => {
@@ -133,6 +145,7 @@ export default gulp.series(
   createWebp,
   svg,
   sprite,
+  copy,
   server,
   watcher
 );
