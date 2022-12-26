@@ -5,6 +5,9 @@ import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import csso from "postcss-csso";
 import rename from "gulp-rename";
+import htmlmin from "gulp-htmlmin";
+import concat from "gulp-concat";
+import terser from "gulp-terser";
 import browser from "browser-sync";
 
 // Styles
@@ -16,8 +19,29 @@ export const styles = () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([autoprefixer(), csso()]))
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css", { sourcemaps: "." }))
+    .pipe(gulp.dest("build/css", { sourcemaps: "." }))
     .pipe(browser.stream());
+};
+
+// HTML
+
+const html = () => {
+  return gulp
+    .src("source/*.html")
+    .pipe(plumber())
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
+    .pipe(browser.stream());
+};
+
+// Script
+
+const script = () => {
+  return gulp
+    .src("source/js/*.js")
+    .pipe(concat("script.js"))
+    .pipe(terser())
+    .pipe(gulp.dest("build/js"));
 };
 
 // Server
@@ -25,7 +49,7 @@ export const styles = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: "source",
+      baseDir: "build",
     },
     cors: true,
     notify: false,
@@ -38,7 +62,10 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/*.html").on("change", browser.reload);
+  gulp.watch("source/*.html", gulp.series(html)).on("change", browser.reload);
+  gulp
+    .watch("source/js/*.js", gulp.series(script))
+    .on("change", browser.reload);
 };
 
-export default gulp.series(styles, server, watcher);
+export default gulp.series(html, styles, script, server, watcher);
