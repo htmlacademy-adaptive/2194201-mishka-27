@@ -5,15 +5,40 @@ const modalOpenLinks = document.querySelectorAll(".modal-link");
 const modalContainer = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal__overlay");
 
-const openMainMenu = () => {
-  headerContainer.classList.toggle("is-open");
+html.classList.remove("no-js");
+
+const onDocumentKeydown = (evt) => {
+  if (evt.key === "Escape") {
+    closeModal();
+  }
 };
 
-const openModal = (event) => {
-  event.preventDefault();
+const openMainMenu = () => {
+  headerContainer.classList.toggle("is-open");
+
+  document.addEventListener("keydown", closeMainMenu);
+  document.addEventListener("click", closeMainMenu);
+};
+
+const closeMainMenu = (evt) => {
+  if (
+    evt.key === "Escape" ||
+    (!evt.target.closest(".main-header__button") &&
+      !evt.target.closest(".main-header__navigation"))
+  ) {
+    headerContainer.classList.remove("is-open");
+
+    document.removeEventListener("keydown", closeMainMenu);
+    document.removeEventListener("click", closeMainMenu);
+  }
+};
+
+const openModal = (evt) => {
+  evt.preventDefault();
   modalContainer.classList.add("is-open");
   html.style.overflowY = "hidden";
 
+  document.addEventListener("keydown", onDocumentKeydown);
   modalOverlay.addEventListener("click", closeModal);
 };
 
@@ -21,12 +46,9 @@ const closeModal = () => {
   modalContainer.classList.remove("is-open");
   html.style.overflowY = null;
 
+  document.removeEventListener("keydown", onDocumentKeydown);
   modalOverlay.removeEventListener("click", closeModal);
 };
-
-if (html.classList.contains("no-js")) {
-  html.classList.remove("no-js");
-}
 
 headerButtonMenu.addEventListener("click", openMainMenu);
 
