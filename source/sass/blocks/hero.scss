@@ -181,18 +181,16 @@
     .hero__text {
       background-color: $color-downy-3;
       transform: translateY(-5px);
+    }
 
-      &::after {
-        opacity: 0.7;
-      }
+    .hero__text::after {
+      opacity: 0.7;
     }
   }
 
   &:active {
-    .hero__text {
-      &::after {
-        opacity: 0.3;
-      }
+    .hero__text::after {
+      opacity: 0.3;
     }
   }
 }
