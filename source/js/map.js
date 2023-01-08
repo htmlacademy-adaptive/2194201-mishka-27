@@ -1,4 +1,9 @@
-ymaps.ready(init);
+const yandexMap = document.querySelector("#map");
+
+if (yandexMap) {
+  ymaps.ready(init);
+}
+
 const coords = [59.938592, 30.32302];
 
 function init() {

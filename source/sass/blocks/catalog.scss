@@ -1,13 +1,15 @@
 .catalog {
+  max-width: 460px;
+  margin: 0 auto;
   padding: 30px 30px 15px 30px;
 
   @media (min-width: $vp-768) {
+    max-width: 100%;
     padding: 76px 50px 53px 50px;
   }
 
   @media (min-width: $vp-1150) {
     width: 1150px;
-    margin: 0 auto;
     padding-top: 129px;
     padding-bottom: 57px;
   }
