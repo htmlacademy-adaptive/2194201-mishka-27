@@ -21,6 +21,8 @@
 
   border: 1px solid $color-whisper-1;
 
+  transition: box-shadow 0.2s ease-out;
+
   grid-template-columns: 1fr;
 
   @media (min-width: $vp-768) {
@@ -194,11 +196,14 @@
   margin: 0 33px;
 
   @media (min-width: $vp-768) {
+    width: calc(100% - 82px);
+    max-width: 100%;
     margin: 0 41px;
   }
 
   @media (min-width: $vp-1150) {
     align-self: start;
+    width: auto;
     margin: 0 56px 53px 82px;
 
     grid-column: 2;

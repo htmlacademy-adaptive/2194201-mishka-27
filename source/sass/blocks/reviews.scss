@@ -1,14 +1,14 @@
 .reviews {
-  padding-bottom: 45px;
+  padding-bottom: 51px;
 
   @media (min-width: $vp-768) {
-    padding-bottom: 68px;
+    padding-bottom: 85px;
   }
 
   @media (min-width: $vp-1150) {
     width: 1050px;
     margin: 0 auto;
-    padding-bottom: 67px;
+    padding-bottom: 89px;
   }
 }
 

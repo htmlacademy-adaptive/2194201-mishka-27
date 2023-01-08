@@ -28,7 +28,7 @@ function init() {
     }
   );
 
-  const clusterer = new ymaps.Clusterer({
+  let clusterer = new ymaps.Clusterer({
     clusterDisableClickZoom: false,
     clusterOpenBalloonOnClick: false,
   });

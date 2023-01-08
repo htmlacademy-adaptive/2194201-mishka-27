@@ -30,7 +30,7 @@
 
       height: 34px;
 
-      background-size: 1150px 34px;
+      background-size: 1250px 34px;
     }
   }
 }
@@ -176,6 +176,25 @@
   &:focus {
     z-index: 1;
   }
+
+  &:hover {
+    .hero__text {
+      background-color: $color-downy-3;
+      transform: translateY(-5px);
+
+      &::after {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    .hero__text {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 .hero__text {
@@ -227,21 +246,6 @@
     opacity: 0.5;
 
     transition: opacity 0.2s;
-  }
-
-  &:hover {
-    background-color: $color-downy-3;
-    transform: translateY(-5px);
-
-    &::after {
-      opacity: 0.7;
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: 0.3;
-    }
   }
 
   @media (min-width: $vp-768) {

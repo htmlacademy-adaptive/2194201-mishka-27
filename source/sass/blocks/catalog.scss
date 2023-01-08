@@ -41,6 +41,8 @@
 
   border: 1px solid $color-whisper-1;
 
+  transition: box-shadow 0.2s ease-out;
+
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $vp-768) {
