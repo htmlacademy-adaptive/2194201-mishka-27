@@ -1,9 +1,11 @@
 .advantages {
+  max-width: 460px;
+  margin: 0 auto;
   padding: 31px 30px 29px 30px;
 
   @media (min-width: $vp-768) {
     width: 768px;
-    margin: 0 auto;
+    max-width: 100%;
     padding: 56px 50px 81px 50px;
   }
 

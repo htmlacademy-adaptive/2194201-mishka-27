@@ -1,14 +1,14 @@
 .reviews {
-  padding-bottom: 45px;
+  padding-bottom: 51px;
 
   @media (min-width: $vp-768) {
-    padding-bottom: 68px;
+    padding-bottom: 85px;
   }
 
   @media (min-width: $vp-1150) {
     width: 1050px;
     margin: 0 auto;
-    padding-bottom: 67px;
+    padding-bottom: 89px;
   }
 }
 
@@ -61,11 +61,6 @@
   margin-bottom: 34px;
 
   line-height: 30px;
-  white-space: pre-line;
-
-  @media (min-width: $vp-321) {
-    white-space: normal;
-  }
 
   @media (min-width: $vp-768) {
     margin-top: 41px;
@@ -123,7 +118,8 @@
 
 .reviews__controls {
   display: flex;
-  margin-bottom: 38px;
+  max-width: 400px;
+  margin: 0 auto 38px;
 
   @media (min-width: $vp-768) {
     margin-top: 3px;
@@ -205,6 +201,8 @@
 }
 
 .reviews__link {
+  margin: 0 auto;
+
   @media (min-width: $vp-768) {
     align-self: start;
     max-width: 220px;

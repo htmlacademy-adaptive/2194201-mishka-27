@@ -402,7 +402,7 @@
     }
 
     @media (min-width: $vp-1150) {
-      width: 698px;
+      width: 700px;
     }
 
     &:not(:last-child) {
@@ -583,7 +583,7 @@
 
 .order__svg {
   position: absolute;
-  top: 50%;
+  top: 49%;
   right: 0;
 
   transform: translateY(-50%);
@@ -600,15 +600,13 @@
   line-height: 18px;
 
   @media (min-width: $vp-768) {
-    margin-right: 25px;
+    margin-right: 26px;
 
     font-size: 19px;
   }
 }
 
 .order__textarea {
-  min-height: 142px;
-  max-height: 500px;
   margin-bottom: 3px;
   padding: 15px;
 
@@ -619,7 +617,7 @@
 
   border: 2px solid $color-charcoal;
 
-  resize: vertical;
+  resize: none;
 
   @media (min-width: $vp-768) {
     margin-bottom: 0;
@@ -680,11 +678,13 @@
 
 .order__button {
   width: 100%;
+  margin: 0 auto;
 
   font-size: 17px;
 
   @media (min-width: $vp-768) {
     order: -1;
     width: 230px;
+    margin: 0;
   }
 }
