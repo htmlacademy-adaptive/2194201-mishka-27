@@ -86,7 +86,7 @@
     @media (min-width: $vp-1150) {
       margin-top: 64px;
 
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 176px 1fr;
     }
 
     .order__legend {
@@ -116,6 +116,10 @@
 
       @media (min-width: $vp-768) {
         padding-top: 0;
+      }
+
+      @media (min-width: $vp-1150) {
+        max-width: 670px;
       }
     }
   }
