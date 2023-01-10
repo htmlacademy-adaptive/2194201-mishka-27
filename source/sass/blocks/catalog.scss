@@ -110,21 +110,18 @@
 }
 
 .catalog__link-title {
-  margin-bottom: 8px;
-  padding: 0 27px;
+  margin: 0 27px 8px 27px;
+
+  justify-self: start;
 
   @media (min-width: $vp-768) {
-    padding: 0;
-    padding-top: 27px;
-    padding-right: 25px;
+    margin: 27px 25px 10px 0;
 
     grid-column: auto / -1;
   }
 
   @media (min-width: $vp-1150) {
-    padding-top: 30px;
-    padding-right: 50px;
-    padding-left: 27px;
+    margin: 30px 50px 8px 27px;
 
     grid-row: 2;
     grid-column: 1;
