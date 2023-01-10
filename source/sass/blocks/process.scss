@@ -194,6 +194,9 @@
 
 .process__button {
   margin: 0 33px;
+  padding: 16px 20px;
+
+  line-height: 16px;
 
   @media (min-width: $vp-768) {
     width: calc(100% - 82px);

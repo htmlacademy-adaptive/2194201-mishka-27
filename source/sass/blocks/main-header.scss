@@ -218,7 +218,7 @@
   @media (min-width: $vp-768) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 18px;
+    margin-top: 15px;
     margin-left: 45px;
     padding-right: 20px;
 
@@ -272,7 +272,7 @@
     }
 
     .main-header__link {
-      padding: 36px 33px 35px 33px;
+      padding: 33px 34px 32px 33px;
 
       font-size: 17px;
     }
@@ -327,12 +327,11 @@
   @media (min-width: $vp-1150) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 17px;
+    margin-top: 15px;
     margin-left: 46px;
 
     .main-header__item {
       margin-right: 51px;
-      margin-bottom: 2px;
 
       &:last-child {
         margin-right: 0;
@@ -360,24 +359,22 @@
 
   font-weight: 700;
   font-size: 17px;
-  line-height: 24px;
   color: $color-black;
 
   @media (min-width: $vp-768) {
     padding: 5px;
-
-    line-height: 18px;
   }
 
   &--icon {
     @media (min-width: $vp-768) {
-      padding: 35px 31px;
+      padding: 32px 31px;
 
       border-left: 1px solid rgba($color-black, 0.1);
     }
 
     @media (min-width: $vp-1150) {
-      padding: 35px 32px;
+      padding-right: 32px;
+      padding-left: 32px;
     }
   }
 
