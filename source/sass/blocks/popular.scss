@@ -40,7 +40,7 @@
   @media (min-width: $vp-768) {
     margin: 0;
     padding-top: 2px;
-    padding-right: 160px;
+    padding-right: 170px;
 
     grid-column: 1 / -1;
     grid-row: 1;
@@ -150,6 +150,7 @@
 
 .popular__title-item {
   flex-basis: 97px;
+  padding-right: 10px;
 }
 
 .popular__description-item {
